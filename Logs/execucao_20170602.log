@@ -1,0 +1,16 @@
+===================================================================================
+Hora: 13:19:11 | Script: /AcademiaGontijo/Modulos/MantemTiposDeTreino.php
+Query executada: insert into TiposDeTreinos  (`tptr_id`, `tptr_nome`, `tptr_descricao`)  values ((?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:19:24 | Script: /AcademiaGontijo/Modulos/MantemTiposDeTreino.php
+Query executada: update TiposDeTreinos set `tptr_id` =  (?), `tptr_nome` =  (?), `tptr_descricao` =  (?) where  tptr_id = ?  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:19:29 | Script: /AcademiaGontijo/Modulos/MantemTiposDeTreino.php
+Query executada: delete from TiposDeTreinos where  tptr_id = ?  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:19:33 | Script: /AcademiaGontijo/Modulos/MantemTiposDeTreino.php
+Query executada: update TiposDeTreinos set `tptr_id` =  (?), `tptr_nome` =  (?), `tptr_descricao` =  (?) where  tptr_id = ?  | Método: executaPs | ID do usuário Logado:
+

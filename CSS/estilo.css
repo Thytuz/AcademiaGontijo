@@ -1,0 +1,76 @@
+
+body{
+    background-color: #e9ebee
+}
+
+.formulario{
+    width: 75%;
+    height: auto; 	
+    margin: 0 auto; 
+    text-align: left;
+}
+
+li{
+    list-style:none; 
+}
+
+h3 {
+    padding:8px; 
+    text-align: center; 
+}
+
+fieldset {
+    line-height: 32px;
+    padding: 0px 8px 8px 8px;
+    width: calc(99% - 16px);
+    border: 1px solid black;
+}
+
+label {
+    float: left;
+    text-align: right;
+    width: 27.8%;
+    height: auto;
+    display: block;
+}
+
+input[type='text'], input[type='password'], input[type='date'], textarea, select {
+    width: 42.5%;
+    margin-left: 1.5%;
+}
+
+form input[type='radio'] {
+    position: relative;
+    padding: 0px;
+    margin-left: 8px;
+    margin-left: 1.5%;
+}
+
+
+button{
+    margin-left: 200px
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    font-size: 25px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    font-size: 20px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+

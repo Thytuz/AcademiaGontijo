@@ -1,0 +1,4 @@
+===================================================================================
+Hora: 14:13:04 | Script: /AcademiaGontijo/Modulos/MantemTreinador.php
+Query executada: delete from Treinadores where  trei_id = ? : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`academia_gontijo`.`atletas`, CONSTRAINT `fk_Atletas_Treinadores` FOREIGN KEY (`atle_trei_id`) REFERENCES `treinadores` (`trei_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+
