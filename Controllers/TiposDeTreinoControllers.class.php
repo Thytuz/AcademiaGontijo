@@ -39,6 +39,7 @@ class TiposDeTreinoController {
                 break;
 
             default:
+                $this->acao = "nov";
                 break;
         }
 
@@ -47,7 +48,7 @@ class TiposDeTreinoController {
 
     private function incluiObjeto() {
         $this->tiposDeTreinoModel = $this->tiposDeTreinoView->recebeDados();
-        
+
         //tratar dados
         //gravar dados
         $incluiu = $this->tiposDeTreinoAdo->insereObjeto($this->tiposDeTreinoModel);

@@ -39,6 +39,7 @@ class AtletaController {
                 break;
 
             default:
+                $this->acao = "nov";
                 break;
         }
 

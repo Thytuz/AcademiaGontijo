@@ -48,7 +48,7 @@ form input[type='radio'] {
 
 
 button{
-    margin-left: 200px
+    margin-left: 150px
 }
 
 .dropdown {
@@ -72,5 +72,12 @@ button{
     display: block;
 }
 
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
 
-
+th, td {
+    padding: 5px;
+    text-align: left;    
+}

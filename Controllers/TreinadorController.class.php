@@ -41,6 +41,7 @@ class TreinadorController {
                 break;
 
             default:
+                $this->acao = "nov";
                 break;
         }
 

@@ -80,6 +80,7 @@ class TiposDeTreinoView extends InterfaceWeb {
                         <button name='acao' type='submit' value='inc'>Incluir</button>
                         <button name='acao' type='submit' value='alt'>Alterar</button>
                         <button name='acao' type='submit' value='exc'>Excluir</button>
+                        <button name='acao' type='submit' value='nov'>Novo</button>
                     </p>
                 </form> 
             </div>";

@@ -51,7 +51,7 @@ class TreinadorView extends InterfaceWeb {
         return $fieldset;
     }
 
-    protected function montaCorpo($treinadorModel) {
+    protected function montaCorpo($treinadorModel = null) {
         $titulo = "<h3>Cadastro de Treinadores</h3>";
 
         $menus = new MenusView();
@@ -67,6 +67,11 @@ class TreinadorView extends InterfaceWeb {
     }
 
     protected function montaFieldsetDados($treinadorModel) {
+        $btnDisabled = null;
+        if ($treinadorModel->getTreiId() == null) {
+            $btnDisabled = "disabled";
+        }
+
         $checkedMas = null;
         $checkedFem = null;
         if ($treinadorModel->getTreiSexo() == 'M') {
@@ -83,14 +88,15 @@ class TreinadorView extends InterfaceWeb {
             <div class='formulario'>
                 <form id='form' action='' method='POST'>
                     <input type='hidden' name='treiId' value='{$treinadorModel->getTreiId()}'>
-                    <label>Nome </label><input type='text' id ='nome' name='treiNome' value='{$treinadorModel->getTreiNome()}'></label><br>
+                    <label>Nome </label><input type='text' id ='nome' name='treiNome' required value='{$treinadorModel->getTreiNome()}'></label><br>
                     <label>Sexo </label>
-                    <input type='radio' id ='gen' name='treiSexo' value='M' {$checkedMas}>Masculino
+                    <input type='radio' id ='gen' name='treiSexo' value='M' required {$checkedMas}>Masculino
                     <input type='radio' id ='gen' name='treiSexo' value='F' {$checkedFem}>Feminino<br>
                     <p>
                         <button name='acao' type='submit' value='inc'>Incluir</button>
-                        <button name='acao' type='submit' value='alt'>Alterar</button>
-                        <button name='acao' type='submit' value='exc'>Excluir</button>
+                        <button name='acao' type='submit' value='alt' {$btnDisabled}>Alterar</button>
+                        <button name='acao' type='submit' value='exc' {$btnDisabled}>Excluir</button>
+                        <button name='acao' type='submit' value='nov'>Novo</button>
                     </p>
                 </form> 
             </div>";

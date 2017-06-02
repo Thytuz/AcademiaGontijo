@@ -39,6 +39,7 @@ class ExercicioController {
                 break;
 
             default:
+                $this->acao = "nov";
                 break;
         }
 
@@ -47,7 +48,7 @@ class ExercicioController {
 
     private function incluiObjeto() {
         $this->exercicioModel = $this->exercicioView->recebeDados();
-        
+
         //tratar dados
         //gravar dados
         $incluiu = $this->exercicioAdo->insereObjeto($this->exercicioModel);
