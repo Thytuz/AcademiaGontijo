@@ -3,7 +3,7 @@
 require_once 'ModelAbstract.class.php';
 
 class AtletaModel extends ModelAbstract {
-///sdfdfsdfsdfsdfsdfsdfsdfdsf
+
     private $atleId;
     private $atleNome;
     private $atleCpf;
