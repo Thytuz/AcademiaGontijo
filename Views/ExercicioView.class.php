@@ -76,6 +76,7 @@ class ExercicioView extends InterfaceWeb {
                     <input type='hidden' name='exerId' value='{$exercicioModel->getExerId()}'>
                     <label>Nome</label><input type='text' id ='nome' name='exerNome' value='{$exercicioModel->getExerNome()}'><br>
                     <label>Descrição</label><textarea rows='4' cols='50' id ='nome' name='exerDescricao'>{$exercicioModel->getExerDescricao()}</textarea><br>   
+                    <input type='hidden' name='exerTptrId' value='{$exercicioModel->getExerTptrId()}'>
                     <p>
                         <button name='acao' type='submit' value='inc'>Incluir</button>
                         <button name='acao' type='submit' value='alt'>Alterar</button>
@@ -104,6 +105,7 @@ class ExercicioView extends InterfaceWeb {
         $exercicioModel->setExerId($_POST['exerId']);
         $exercicioModel->setExerNome($_POST['exerNome']);
         $exercicioModel->setExerDescricao($_POST['exerDescricao']);
+        $exercicioModel->setExerTptrId($_POST['ExerTptrId']);
 
         return $exercicioModel;
     }

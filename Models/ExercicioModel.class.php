@@ -2,16 +2,18 @@
 
 require_once 'ModelAbstract.class.php';
 
-class ExercicioModel extends ModelAbstract{
-    
+class ExercicioModel extends ModelAbstract {
+
     private $exerId;
     private $exerNome;
     private $exerDescricao;
-    
-    function __construct($exerId = NULL, $exerNome = NULL, $exerDescricao = NULL) {
+    private $exerTptrId;
+
+    function __construct($exerId = NULL, $exerNome = NULL, $exerDescricao = NULL, $exerTptrId = NULL) {
         $this->exerId = $exerId;
         $this->exerNome = $exerNome;
         $this->exerDescricao = $exerDescricao;
+        $exerTptrId->exerTptrId = $exerTptrId;
     }
 
     function getExerId() {
@@ -37,6 +39,13 @@ class ExercicioModel extends ModelAbstract{
     function setExerDescricao($exerDescricao) {
         $this->exerDescricao = $exerDescricao;
     }
-    
-}
 
+    function getExerTptrId() {
+        return $this->exerTptrId;
+    }
+
+    function setExerTptrId($exerTptrId) {
+        $this->exerTptrId = $exerTptrId;
+    }
+
+}
