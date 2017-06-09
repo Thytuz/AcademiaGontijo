@@ -6,6 +6,8 @@ require_once 'MenusView.class.php';
 require_once '../Models/AtletaModel.class.php';
 require_once '../ADOs/ExercicioADO.class.php';
 require_once '../Models/ExercicioModel.class.php';
+require_once '../ADOs/TipoDeTreinoADO.class.php';
+require_once '../Models/TipoDeTreinoModel.class.php';
 
 class TreinoView extends InterfaceWeb {
 
@@ -31,7 +33,7 @@ class TreinoView extends InterfaceWeb {
     public function montaFieldSetDados($treinoModel) {
         $optionsAtletas = $this->montaOptionsAtletas();
         $optionsExercicios = $this->montaOptionsExercicios();
-        $optionsSequencia = $this->montaOptionsSequencia();
+        $optionsTiposDeTreino = $this->montaOptionsTiposDeTreino();
 
         $fieldset = "<fieldset><legend>Dados do Treino</legend>";
 
@@ -44,20 +46,32 @@ class TreinoView extends InterfaceWeb {
                             </select>
                         <br>
                         
-                        <label>Pretenção</label>
-                        <input type='text' name='trei_pretencao' id='pretencao' value='{$treinoModel->getTreiPretencao()}'>
-                        
-                        <fieldset><legend>Treino</legend>
-                        
-                        <label>Exercicio</label>
-                            <select id ='exerId' name='exerId'>
-                                {$optionsExercicios}
-                            </select>
+                        <label>Sequência</label>
+                            <input type='text' id='sequencia' name='tren_seq'>
                         <br>
                         
-                        <label>Dia</label>
-                            <select id='sequencia' name='trei_sequencia'>
-                                {$optionsSequencia}
+                        <label>Tipo de Treino</label>
+                            <select id ='tptrId' name='tptrId'>
+                                {$optionsTiposDeTreino}
+                            </select>
+                            <script>
+                                $('#tptrId').on('change', function (e) {
+                                    var optionSelected = $('option:selected', this);
+                                    var valueSelected = this.value;
+                                    $.ajax({
+                                        type:'POST',
+                                        tptrId: valueSelected,
+                                        sucess
+                                    });
+                                });
+                            </script>
+                        <br>
+                        
+                        <fieldset><legend>Treino</legend>
+
+                        <label>Exercício</label>
+                            <select id ='exerId' name='exerId'>
+                                {$optionsExercicios}
                             </select>
                         <br>
                         
@@ -74,8 +88,9 @@ class TreinoView extends InterfaceWeb {
 
                         <table style='width:100%'>
                             <tr>
-                                <th>Exercicio</th>
-                                <th>Dia</th>
+                                <th>Tipo de Treino</th>
+                                <th>Exercício</th>
+                                <th>Sequência</th>
                                 <th>Séries</th>
                                 <th>Repetições</th>
                                 <th>Tempo</th>
@@ -150,16 +165,26 @@ class TreinoView extends InterfaceWeb {
         return $optionsDosExercicios;
     }
 
-    public function montaOptionsSequencia() {
-        $optionsSequencia = "<option value='1'>Segunda-Feira</option>";
-        $optionsSequencia .= "<option value='2'>Terça-Feira</option>";
-        $optionsSequencia .= "<option value='3'>Quarta-Feira</option>";
-        $optionsSequencia .= "<option value='4'>Quinta-Feira</option>";
-        $optionsSequencia .= "<option value='5'>Sexta-Feira</option>";
-        $optionsSequencia .= "<option value='6'>Sábado</option>";
-        $optionsSequencia .= "<option value='7'>Domingo</option>";
+    public function montaOptionsTiposDeTreino() {
+        $tiposDeTreinoAdo = new TiposDeTreinoAdo();
+        $buscou = $tiposDeTreinosModel = $tiposDeTreinoAdo->buscaArrayObjetoComPs(array(), 1, "order by tptr_nome");
+        if ($buscou) {
+            //continua
+        } else {
+            if ($buscou === 0) {
+                parent::adicionaEmMensagens("Não encontrou nenhum tipo de treino!");
+            } else {
+                parent::adicionaEmMensagens("Erro ao buscar tipo de treino! Contate o analista responsável pelo sistema.");
+            }
+            $tiposDeTreinosModel = array();
+        }
 
-        return $optionsSequencia;
+        $optionsDosTiposDeTreino = null;
+        foreach ($tiposDeTreinosModel as $tiposDetreinoModel) {
+            $optionsDosTiposDeTreino .= "\n\t\t\t<option value='{$tiposDetreinoModel->getTptrId()}'>{$tiposDetreinoModel->getTptrNome()}</option>";
+        }
+
+        return $optionsDosTiposDeTreino;
     }
 
 }

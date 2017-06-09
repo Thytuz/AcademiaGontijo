@@ -32,6 +32,7 @@ abstract class InterfaceWeb {
     private function montaHtml1($titulo) {
         $this->html1 = "<!DOCTYPE html>\n<html lang='pt-br'>\n\t<head>\n\t\t<meta charset='UTF-8'>\n\t\t<title>{$titulo}</title>
             \n\t\t<link rel='stylesheet' href='../CSS/estilo.css'>\n\t\n
+                  <script src='../JS/jquery-3.1.1.js'></script> 
             \n\t</head>\n\t<body>\n";
     }
 

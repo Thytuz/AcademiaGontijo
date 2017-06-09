@@ -1,8 +1,8 @@
 <?php
 
-require_once '../Views/TiposDeTreinoView.class.php';
-require_once '../Models/TiposDeTreinoModel.class.php';
-require_once '../ADOs/TiposDeTreinoADO.class.php';
+require_once '../Views/TipoDeTreinoView.class.php';
+require_once '../Models/TipoDeTreinoModel.class.php';
+require_once '../ADOs/TipoDeTreinoADO.class.php';
 
 class TiposDeTreinoController {
 
