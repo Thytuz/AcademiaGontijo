@@ -95,6 +95,8 @@ class AtletaView extends InterfaceWeb {
                     <label>Peso </label><input type='text' placeholder='0.0' id='peso' name='atlePeso' value='{$atletaModel->getAtlePeso()}'><br>
                     <label>Altura </label><input type='text' placeholder='0.0' id='altura' name='atleAltura' value='{$atletaModel->getAtleAltura()}'><br>
                     <label>Observações</label><textarea rows='4' cols='50' id='obs' name='atleObs'>{$atletaModel->getAtleObs()}</textarea><br>
+                    <label>Pretenção</label><input type='text' id='pretencao' name='atlePretencao' value='{$atletaModel->getAtlePretencao()}'><br>
+
                     <label>Treinador</label>
                             <select id ='treiId' name='treiId'>
                                 {$optionsDosTreinadores}
@@ -147,6 +149,7 @@ class AtletaView extends InterfaceWeb {
         $atletaModel->setAtlePeso($_POST['atlePeso']);
         $atletaModel->setAtleAltura($_POST['atleAltura']);
         $atletaModel->setAtleObs($_POST['atleObs']);
+        $atletaModel->setAtlePretencao($_POST['atlePretencao']);
         $atletaModel->setAtleTreiId($_POST['treiId']);
 
         return $atletaModel;

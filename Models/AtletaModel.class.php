@@ -12,9 +12,10 @@ class AtletaModel extends ModelAbstract {
     private $atlePeso;
     private $atleAltura;
     private $atleObs;
+    private $atlePretencao;
     private $atleTreiId;
 
-    function __construct($atleId = null, $atleNome = null, $atleCpf = null, $atleDtNasc = null, $atleSexo = null, $atlePeso = null, $atleAltura = null, $atleObs = null, $atleTreiId = null) {
+    function __construct($atleId = null, $atleNome = null, $atleCpf = null, $atleDtNasc = null, $atleSexo = null, $atlePeso = null, $atleAltura = null, $atleObs = null, $atlePretencao = null, $atleTreiId = null) {
         $this->atleId = $atleId;
         $this->atleNome = $atleNome;
         $this->atleCpf = $atleCpf;
@@ -23,6 +24,7 @@ class AtletaModel extends ModelAbstract {
         $this->atlePeso = $atlePeso;
         $this->atleAltura = $atleAltura;
         $this->atleObs = $atleObs;
+        $this->atlePretencao = $atlePretencao;
         $this->atleTreiId = $atleTreiId;
     }
 
@@ -88,6 +90,14 @@ class AtletaModel extends ModelAbstract {
 
     function setAtleAltura($atleAltura) {
         $this->atleAltura = $atleAltura;
+    }
+
+    function getAtlePretencao() {
+        return $this->atlePretencao;
+    }
+
+    function setAtlePretencao($atlePretencao) {
+        $this->atlePretencao = $atlePretencao;
     }
 
     function setAtleObs($atleObs) {
