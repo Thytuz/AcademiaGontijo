@@ -1,8 +1,0 @@
-===================================================================================
-Hora: 15:42:32 | Script: /AcademiaGontijo/Modulos/MantemTreinador.php
-Query executada: insert into Treinadores  (`trei_id`, `trei_nome`, `trei_sexo`)  values ((?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'trei_sexo' cannot be null
-
-===================================================================================
-Hora: 15:47:05 | Script: /AcademiaGontijo/Modulos/MantemTreinador.php
-Query executada: insert into Treinadores  (`trei_id`, `trei_nome`, `trei_sexo`)  values ((?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '3' for key 'PRIMARY'
-
