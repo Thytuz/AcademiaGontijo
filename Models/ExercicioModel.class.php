@@ -7,13 +7,13 @@ class ExercicioModel extends ModelAbstract {
     private $exerId;
     private $exerNome;
     private $exerDescricao;
-    private $exerTptrId;
+    private $exerTpTrId;
 
-    function __construct($exerId = NULL, $exerNome = NULL, $exerDescricao = NULL, $exerTptrId = NULL) {
+    function __construct($exerId = NULL, $exerNome = NULL, $exerDescricao = NULL, $exerTpTrId = NULL) {
         $this->exerId = $exerId;
         $this->exerNome = $exerNome;
         $this->exerDescricao = $exerDescricao;
-        $this->exerTptrId = $exerTptrId;
+        $this->exerTpTrId = $exerTpTrId;
     }
 
     function getExerId() {
@@ -40,12 +40,12 @@ class ExercicioModel extends ModelAbstract {
         $this->exerDescricao = $exerDescricao;
     }
 
-    function getExerTptrId() {
-        return $this->exerTptrId;
+    function getExerTpTrId() {
+        return $this->exerTpTrId;
     }
 
-    function setExerTptrId($exerTptrId) {
-        $this->exerTptrId = $exerTptrId;
+    function setExerTpTrId($exerTpTrId) {
+        $this->exerTpTrId = $exerTpTrId;
     }
 
 }

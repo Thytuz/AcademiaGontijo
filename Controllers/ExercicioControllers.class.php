@@ -52,7 +52,7 @@ class ExercicioController {
         //tratar dados
         //gravar dados
         $incluiu = $this->exercicioAdo->insereObjeto($this->exercicioModel);
-
+        var_dump($this->exercicioModel);
         if ($incluiu) {
             $this->exercicioView->adicionaEmMensagens("Incluído com sucesso!");
         } else {
