@@ -105,7 +105,7 @@ class ExercicioView extends InterfaceWeb {
         $exercicioModel->setExerId($_POST['exerId']);
         $exercicioModel->setExerNome($_POST['exerNome']);
         $exercicioModel->setExerDescricao($_POST['exerDescricao']);
-        $exercicioModel->setExerTptrId($_POST['ExerTptrId']);
+        $exercicioModel->setExerTptrId($_POST['exerTptrId']);
 
         return $exercicioModel;
     }

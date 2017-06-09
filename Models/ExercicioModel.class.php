@@ -13,7 +13,7 @@ class ExercicioModel extends ModelAbstract {
         $this->exerId = $exerId;
         $this->exerNome = $exerNome;
         $this->exerDescricao = $exerDescricao;
-        $exerTptrId->exerTptrId = $exerTptrId;
+        $this->exerTptrId = $exerTptrId;
     }
 
     function getExerId() {
