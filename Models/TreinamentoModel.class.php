@@ -8,7 +8,7 @@ class TreinamentoModel extends ModelAbstract {
     private $tremRepeticao;
     private $tremSerie;
 
-    function __construct($tremTrenId, $tremExerId, $tremTemp, $tremRepeticao, $tremSerie) {
+    function __construct($tremTrenId = null, $tremExerId = null, $tremTemp = null, $tremRepeticao = null, $tremSerie = null) {
         $this->tremTrenId = $tremTrenId;
         $this->tremExerId = $tremExerId;
         $this->tremTemp = $tremTemp;

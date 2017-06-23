@@ -27,48 +27,60 @@ class TreinoView extends InterfaceWeb {
     }
 
     public function montaFieldsetConsulta() {
-        
-    }
-
-    public function montaFieldSetDados($treinoModel) {
         $optionsAtletas = $this->montaOptionsAtletas();
-        $optionsExercicios = $this->montaOptionsExercicios();
-        $optionsTiposDeTreino = $this->montaOptionsTiposDeTreino();
 
-        $fieldset = "<fieldset><legend>Dados do Treino</legend>";
-
+        $fieldset = "<fieldset><legend>Consulta</legend>";
         $fieldset .= "
             <div class='formulario'>
                 <form id='form' action='' method='POST'>
                         <label>Atleta</label>
-                            <select id ='atleId' name='atleId'>
+                            <select id ='trenAtleId' name='trenAtleId'>
                                 {$optionsAtletas}
                             </select>
                         <br>
-                        
-                        <label>Sequência</label>
-                            <input type='text' id='sequencia' name='tren_seq'>
+                        <p><button name='acao' type='submit' value='con'>Consultar</button></p>
+                    </form>
+            </div>";
+        $fieldset .= "</fieldset>";
+
+        return $fieldset;
+    }
+
+    public function montaFieldSetDados($treinoModel = null) {
+        $optionsAtletas = $this->montaOptionsAtletas();
+        $optionsExercicios = $this->montaOptionsExercicios();
+        $optionsTiposDeTreino = $this->montaOptionsTiposDeTreino();
+
+        $fieldset = "
+            <fieldset><legend>Treino</legend>
+                <div class='formulario'>
+                    <form id='form' action='' method='POST'>
+                        <label>Atleta</label>
+                            <select id ='trenAtleId' name='trenAtleId'>
+                                {$optionsAtletas}
+                            </select>
+                        <br>
+                         <label>Sequência</label>
+                            <input type='text' id='sequencia' name='trenSeq' required>
                         <br>
                         
                         <label>Tipo de Treino</label>
-                            <select id ='tptrId' name='tptrId'>
+                            <select id ='trenTptrId' name='trenTptrId'>
                                 {$optionsTiposDeTreino}
                             </select>
                             <script>
-                                $('#tptrId').on('change', function (e) {
+                                $('#trenTptrId').on('change', function (e) {
                                     var optionSelected = $('option:selected', this);
                                     var valueSelected = this.value;
                                     $.ajax({
                                         type:'POST',
-                                        tptrId: valueSelected,
+                                        trenTptrId: valueSelected,
                                         sucess
                                     });
                                 });
                             </script>
                         <br>
                         
-                        <fieldset><legend>Treino</legend>
-
                         <label>Exercício</label>
                             <select id ='exerId' name='exerId'>
                                 {$optionsExercicios}
@@ -76,17 +88,22 @@ class TreinoView extends InterfaceWeb {
                         <br>
                         
                         <label>Repetições</label>
-                        <input type='text' name='trei_repeticoes' id='repeticoes'>
-
+                        <input type='text' name='tremRepeticao' id='tremRepeticao' value='0'>
+                        <br>
+                        
                         <label>Séries</label>
-                        <input type='text' name='trei_series' id='series'>
+                        <input type='text' name='tremSerie' id='tremSerie' value='0'>
+                        <br>
                         
                         <label>Tempo</label>
-                        <input type='text' name='trei_tempo' id='tempo' placeholder='min'>
+                        <input type='text' name='tremTempo' id='tremTempo' placeholder='min' value='0'>
+                        <br>
                         
-                        <button name='acao' id='adicionar' value='adc'>Adicionar</button>
+                        <center><button name='acao' id='adicionar' value='inc'>Adicionar</button></center>";
 
-                        <table style='width:100%'>
+
+        if (is_array($treinoModel)) {
+            $fieldset .= "<table style='width:100%'>
                             <tr>
                                 <th>Tipo de Treino</th>
                                 <th>Exercício</th>
@@ -94,30 +111,64 @@ class TreinoView extends InterfaceWeb {
                                 <th>Séries</th>
                                 <th>Repetições</th>
                                 <th>Tempo</th>
-                            </tr>
-                        </table>
-                        
-                        <p>
-                        <button name='acao' type='submit' value='inc'>Incluir</button>
-                        <button name='acao' type='submit' value='alt'>Alterar</button>
-                        <button name='acao' type='submit' value='exc'>Excluir</button>
-                        <button name='acao' type='submit' value='nov'>Novo</button>
-                        </p>
+                            </tr>";
+            foreach ($treinoModel as $treino) {
+                $tiposDeTreino = $this->buscaTiposDeTreinoPorTreinoTptrId($treino->getTrenTptrId());
+                $treinamento = $this->buscaTreinamentoDoAtleta($treino->getTrenId());
+                $exercicio = $this->buscaExerciciosPorTremExerId($treinamento->getTremExerId());
+                $fieldset .= " <tr>
+                                <td>{$tiposDeTreino->getTptrNome()}</td>
+                                <td>{$exercicio->getExerNome()}</td>
+                                <td>{$treino->getTrenSeq()}</td>
+                                <td>{$treinamento->getTremSerie()}</td>
+                                <td>{$treinamento->getTremRepeticao()}</td>
+                                <td>{$treinamento->getTremTemp()}</td>
+                            </tr>";
+            }
+            $fieldset .= "   </table>
                 </form> 
-            </div>";
-
-
-        $fieldset .= "\n</fieldset>";
+            </div>
+        </fieldset>";
+        } else {
+            $fieldset .= "</form> 
+            </div>
+        </fieldset>";
+        }
 
         return $fieldset;
     }
 
     public function recebeDados() {
-        
+        $trenAtleId = $_POST['trenAtleId'];
+        $sequencia = $_POST['trenSeq'];
+        $tipoDeTreino = $_POST['trenTptrId'];
+        $exercicio = $_POST['exerId'];
+        $repeticoes = $_POST['tremRepeticao'];
+        $series = $_POST['tremSerie'];
+        $tempo = $_POST['tremTempo'];
+
+        $stdClass = new stdClass();
+        $stdClass->trenAtleId = $trenAtleId;
+        $stdClass->trenSeq = $sequencia;
+        $stdClass->trenTptrId = $tipoDeTreino;
+        $stdClass->exerId = $exercicio;
+        $stdClass->tremRepeticao = $repeticoes;
+        $stdClass->tremSerie = $series;
+        $stdClass->tremTempo = $tempo;
+
+        return $stdClass;
     }
 
     public function recebeDadosDaConsulta() {
-        
+        if (isset($_POST['trenAtleId'])) {
+            $treinoModel = new TreinoModel();
+
+            $treinoModel->setTrenAtleId($_POST['trenAtleId']);
+
+            return $treinoModel;
+        } else {
+            return null;
+        }
     }
 
     public function montaOptionsAtletas() {
@@ -185,6 +236,27 @@ class TreinoView extends InterfaceWeb {
         }
 
         return $optionsDosTiposDeTreino;
+    }
+
+    public function buscaTreinamentoDoAtleta($trenId) {
+        $treinamentoAdo = new TreinamentoAdo();
+        $where = " trem_tren_id = ?";
+        $treinamentoModel = $treinamentoAdo->buscaObjetoComPs(array($trenId), $where);
+        return $treinamentoModel;
+    }
+
+    public function buscaTiposDeTreinoPorTreinoTptrId($trenTptrId) {
+        $tiposDeTreinoAdo = new TiposDeTreinoAdo();
+        $where = " tptr_id = ?";
+        $tiposDeTreinoModel = $tiposDeTreinoAdo->buscaObjetoComPs(array($trenTptrId), $where);
+        return $tiposDeTreinoModel;
+    }
+
+    public function buscaExerciciosPorTremExerId($tremExerId) {
+        $exercicioAdo = new ExercicioAdo();
+        $where = " exer_id = ?";
+        $exercicioModel = $exercicioAdo->buscaObjetoComPs(array($tremExerId), $where);
+        return $exercicioModel;
     }
 
 }

@@ -1,7 +1,7 @@
 <?php
 
 class TreinamentoAdo extends AdoPdoAbstract {
-    
+
     public function __construct() {
         parent::__construct();
         parent::setNomeDaTabela("Treinamentos");
@@ -15,8 +15,11 @@ class TreinamentoAdo extends AdoPdoAbstract {
         
     }
 
-    public function insereObjeto(\ModelAbstract $objetoModel) {
-        
+    public function insereObjeto(\ModelAbstract $treinamentoModel) {
+        $colunasValores = parent::montaArrayDeDadosDaTabela($treinamentoModel);
+        $query = parent::montaInsertDoObjetoPS(parent::getNomeDaTabela(), $colunasValores);
+
+        return parent::executaPs($query, $colunasValores);
     }
 
 }

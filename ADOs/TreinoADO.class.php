@@ -1,6 +1,8 @@
 <?php
 
-class TreinoADO extends AdoPdoAbstract {
+require_once 'adopdoabstract.class.php';
+
+class TreinoAdo extends AdoPdoAbstract {
 
     public function __construct() {
         parent::__construct();
@@ -15,8 +17,16 @@ class TreinoADO extends AdoPdoAbstract {
         
     }
 
-    public function insereObjeto(\ModelAbstract $objetoModel) {
-        
+    public function insereObjeto(\ModelAbstract $treinoModel) {
+        $colunasValores = parent::montaArrayDeDadosDaTabela($treinoModel);
+        $query = parent::montaInsertDoObjetoPS(parent::getNomeDaTabela(), $colunasValores);
+
+        return parent::executaPs($query, $colunasValores);
+    }
+
+    public function buscaTreinoPorAtleId($trenAtleId) {
+        $where = " tren_atle_id = ? ";
+        return parent::buscaArrayObjetoComPs(array($trenAtleId), $where);
     }
 
 }
