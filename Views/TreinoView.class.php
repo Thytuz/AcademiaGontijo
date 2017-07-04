@@ -48,7 +48,8 @@ class TreinoView extends InterfaceWeb {
 
     public function montaFieldSetDados($treinoModel = null) {
         $optionsAtletas = $this->montaOptionsAtletas();
-        $optionsExercicios = $this->montaOptionsExercicios();
+//        $exercicioAdo = new ExercicioAdo();
+//        $exercicioAdo->buscaExerciciosPorTipoDeTreino(1);
         $optionsTiposDeTreino = $this->montaOptionsTiposDeTreino();
 
         $fieldset = "
@@ -65,25 +66,14 @@ class TreinoView extends InterfaceWeb {
                         <br>
                         
                         <label>Tipo de Treino</label>
-                            <select id ='trenTptrId' name='trenTptrId'>
+                            <select id ='trenTptrId' name='trenTptrId' onchange=\"montaOptionsParaCombos('trenTptrId', 'exerId', 'ExercicioADO', 'buscaExerciciosPorTipoDeTreino')\">
                                 {$optionsTiposDeTreino}
                             </select>
-                            <script>
-                                $('#trenTptrId').on('change', function (e) {
-                                    var optionSelected = $('option:selected', this);
-                                    var valueSelected = this.value;
-                                    $.ajax({
-                                        type:'POST',
-                                        trenTptrId: valueSelected,
-                                        sucess
-                                    });
-                                });
-                            </script>
                         <br>
                         
                         <label>Exercício</label>
                             <select id ='exerId' name='exerId'>
-                                {$optionsExercicios}
+                                <option value='-1'>Escolha um tipo de treino primeiro</option>
                             </select>
                         <br>
                         
@@ -143,9 +133,9 @@ class TreinoView extends InterfaceWeb {
         $sequencia = $_POST['trenSeq'];
         $tipoDeTreino = $_POST['trenTptrId'];
         $exercicio = $_POST['exerId'];
-        $repeticoes = $_POST['tremRepeticao'];
-        $series = $_POST['tremSerie'];
-        $tempo = $_POST['tremTempo'];
+        $_POST['tremRepeticao'] == 0 ? $repeticoes = 0 : $repeticoes = $_POST['tremRepeticao'];
+        $_POST['tremSerie'] == 0 ? $series = 0 : $series = $_POST['tremSerie'];
+        $_POST['tremTempo'] == 0 ? $tempo = 0 : $tempo = $_POST['tremTempo'];
 
         $stdClass = new stdClass();
         $stdClass->trenAtleId = $trenAtleId;
@@ -230,7 +220,7 @@ class TreinoView extends InterfaceWeb {
             $tiposDeTreinosModel = array();
         }
 
-        $optionsDosTiposDeTreino = null;
+        $optionsDosTiposDeTreino = "<option value='-1'>Escolha um tipo de treino</option>";
         foreach ($tiposDeTreinosModel as $tiposDetreinoModel) {
             $optionsDosTiposDeTreino .= "\n\t\t\t<option value='{$tiposDetreinoModel->getTptrId()}'>{$tiposDetreinoModel->getTptrNome()}</option>";
         }

@@ -12,7 +12,7 @@ class TiposDeTreinoAdo extends AdoPdoAbstract {
     public function insereObjeto(ModelAbstract $tiposDeTreinoModel) {
         $colunasValores = parent::montaArrayDeDadosDaTabela($tiposDeTreinoModel);
         $query = parent::montaInsertDoObjetoPS(parent::getNomeDaTabela(), $colunasValores);
-        
+
         return parent::executaPs($query, $colunasValores);
     }
 
@@ -35,7 +35,7 @@ class TiposDeTreinoAdo extends AdoPdoAbstract {
         return parent::executaPs($query, array($tiposDeTreinoModel->getTptrId()));
     }
 
-    public function buscaTiposDeTreino($tptrId) {
+    public function buscaTiposDeTreinoPorTipoDeTreinoId($tptrId) {
         $where = " tptr_id = ? ";
         return parent::buscaObjetoComPs(array($tptrId), $where);
     }
@@ -61,4 +61,5 @@ class TiposDeTreinoAdo extends AdoPdoAbstract {
 
         return $nomes;
     }
+
 }

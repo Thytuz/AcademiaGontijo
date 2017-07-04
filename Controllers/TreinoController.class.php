@@ -66,7 +66,7 @@ class TreinoController {
         if ($incluiu) {
             $this->treinamentoModel->setTremTrenId($this->treinoAdo->recuperaId());
             $this->treinamentoModel->setTremExerId($stdClass->exerId);
-            $this->treinamentoModel->setTremTemp($stdClass->tremTemp);
+            $this->treinamentoModel->setTremTemp($stdClass->tremTempo);
             $this->treinamentoModel->setTremRepeticao($stdClass->tremRepeticao);
             $this->treinamentoModel->setTremSerie($stdClass->tremSerie);
 

@@ -63,7 +63,7 @@ class TiposDeTreinoController {
     private function consultaObjeto() {
         $tiposDeTreinoModel = $this->tiposDeTreinoView->recebeDadosDaConsulta();
 
-        $buscou = $this->tiposDeTreinoModel = $this->tiposDeTreinoAdo->buscaTiposDeTreino($tiposDeTreinoModel->getTptrId());
+        $buscou = $this->tiposDeTreinoModel = $this->tiposDeTreinoAdo->buscaTiposDeTreinoPorTipoDeTreinoId($tiposDeTreinoModel->getTptrId());
         if ($buscou) {
             //continua
         } else {

@@ -12,7 +12,7 @@ class ExercicioAdo extends AdoPdoAbstract {
     public function insereObjeto(ModelAbstract $exercicioModel) {
         $colunasValores = parent::montaArrayDeDadosDaTabela($exercicioModel);
         $query = parent::montaInsertDoObjetoPS(parent::getNomeDaTabela(), $colunasValores);
-        
+
         return parent::executaPs($query, $colunasValores);
     }
 
@@ -61,4 +61,28 @@ class ExercicioAdo extends AdoPdoAbstract {
 
         return $nomes;
     }
+
+    public function buscaExerciciosPorTipoDeTreino($tptrId) {
+        $query = "SELECT * FROM Exercicios where exer_tptr_id = ?";
+
+        $resultado = parent::executaPs($query, array($tptrId));
+
+        if (!$resultado) {
+            return FALSE;
+        }
+        $arrayDeExercicios = null;
+
+        while ($linha = $this->leTabelaBd()) {
+            $exerciciosStdClass = new stdClass();
+            $exerciciosStdClass->exerId = $linha['exer_id'];
+            $exerciciosStdClass->exerNome = $linha['exer_nome'];
+            $exerciciosStdClass->exerDescricao = $linha['exer_descricao'];
+
+            $arrayDeExercicios[] = $exerciciosStdClass;
+        }
+        var_dump($arrayDeExercicios) . die();
+
+        return $arrayDeExercicios;
+    }
+
 }
