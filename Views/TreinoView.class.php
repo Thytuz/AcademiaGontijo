@@ -66,7 +66,7 @@ class TreinoView extends InterfaceWeb {
                         <br>
                         
                         <label>Tipo de Treino</label>
-                            <select id ='trenTptrId' name='trenTptrId' onchange=\"montaOptionsParaCombos('trenTptrId', 'exerId', 'ExercicioADO', 'buscaExerciciosPorTipoDeTreino')\">
+                            <select id ='trenTptrId' name='trenTptrId' onchange=\"montaOptionsParaCombo('trenTptrId', 'exerId', 'ExercicioADO', 'buscaExerciciosPorTipoDeTreino')\">
                                 {$optionsTiposDeTreino}
                             </select>
                         <br>

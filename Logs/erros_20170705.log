@@ -1,0 +1,4 @@
+===================================================================================
+Hora: 04:19:19 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinos  (`tren_id`, `tren_atle_id`, `tren_seq`, `tren_tptr_id`)  values ((?), (?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-2-2' for key 'unique'
+

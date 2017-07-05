@@ -73,14 +73,14 @@ class ExercicioAdo extends AdoPdoAbstract {
         $arrayDeExercicios = null;
 
         while ($linha = $this->leTabelaBd()) {
+            
             $exerciciosStdClass = new stdClass();
+          
             $exerciciosStdClass->exerId = $linha['exer_id'];
             $exerciciosStdClass->exerNome = $linha['exer_nome'];
-            $exerciciosStdClass->exerDescricao = $linha['exer_descricao'];
 
             $arrayDeExercicios[] = $exerciciosStdClass;
         }
-        var_dump($arrayDeExercicios) . die();
 
         return $arrayDeExercicios;
     }

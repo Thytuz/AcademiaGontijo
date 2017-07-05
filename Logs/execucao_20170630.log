@@ -1,0 +1,16 @@
+===================================================================================
+Hora: 13:40:10 | Script: /AcademiaGontijo/Modulos/MantemTreinador.php
+Query executada: insert into Treinadores  (`trei_id`, `trei_nome`, `trei_sexo`)  values ((?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:41:01 | Script: /AcademiaGontijo/Modulos/MantemAtleta.php
+Query executada: insert into Atletas  (`atle_id`, `atle_nome`, `atle_cpf`, `atle_dt_nasc`, `atle_sexo`, `atle_peso`, `atle_altura`, `atle_pretencao`, `atle_obs`, `atle_trei_id`)  values ((?), (?), (?), (?), (?), (?), (?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:41:42 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinos  (`tren_id`, `tren_atle_id`, `tren_seq`, `tren_tptr_id`)  values ((?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:41:42 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinamentos  (`trem_tren_id`, `trem_exer_id`, `trem_temp`, `trem_repeticao`, `trem_serie`)  values ((?), (?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+

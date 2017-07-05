@@ -34,7 +34,7 @@ abstract class InterfaceWeb {
             \n\t\t<link rel='stylesheet' href='../CSS/estilo.css'>\n\t\n
                   <script src='../JS/jquery-3.1.1.js'></script>
                   <script src='../JS/buscaopcoesparacombos.js'></script>
-                  <script src='../JS/buscaopcoesparacombo2.js'></script>
+                  <script src='../JS/buscaoptionsparacombo.js'></script>
             \n\t</head>\n\t<body>\n";
     }
 
