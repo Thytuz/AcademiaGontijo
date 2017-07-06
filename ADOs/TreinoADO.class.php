@@ -20,7 +20,8 @@ class TreinoAdo extends AdoPdoAbstract {
     public function insereObjeto(\ModelAbstract $treinoModel) {
         $colunasValores = parent::montaArrayDeDadosDaTabela($treinoModel);
         $query = parent::montaInsertDoObjetoPS(parent::getNomeDaTabela(), $colunasValores);
-
+        var_dump($query);
+        var_dump($colunasValores);
         return parent::executaPs($query, $colunasValores);
     }
 
