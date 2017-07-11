@@ -90,8 +90,12 @@ class ExercicioView extends InterfaceWeb {
     }
 
     protected function montaFieldsetDados($exercicioModel) {
-        $optionsDosTiposDeTreino = $this->montaOptionsDaConsultaDeTiposDeTreino();
+        $btnDisabled = null;
+        if ($exercicioModel->getExerId() == null) {
+            $btnDisabled = "disabled";
+        }
 
+        $optionsDosTiposDeTreino = $this->montaOptionsDaConsultaDeTiposDeTreino();
 
         $fieldset = "<fieldset><legend>Exercicios</legend>";
 
@@ -109,9 +113,9 @@ class ExercicioView extends InterfaceWeb {
                         <br>
                     <p>
                         <button name='acao' type='submit' value='inc'>Incluir</button>
-                        <button name='acao' type='submit' value='alt'>Alterar</button>
-                        <button name='acao' type='submit' value='exc'>Excluir</button>
-                        <button name='acao' type='submit' value='nov'>Novo</button>
+                        <button name='acao' type='submit' value='alt' {$btnDisabled}>Alterar</button>
+                        <button name='acao' type='submit' value='exc' {$btnDisabled}>Excluir</button>
+                        <button name='acao' type='submit' value='nov' {$btnDisabled}>Novo</button>
                     </p>
                 </form> 
             </div>";

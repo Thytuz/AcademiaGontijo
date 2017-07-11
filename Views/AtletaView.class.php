@@ -68,6 +68,10 @@ class AtletaView extends InterfaceWeb {
     }
 
     protected function montaFieldsetDados($atletaModel) {
+        $btnDisabled = null;
+        if ($atletaModel->getAtleId() == null) {
+            $btnDisabled = "disabled";
+        }
         $checkedMas = null;
         $checkedFem = null;
         if ($atletaModel->getAtleSexo() == 'M') {
@@ -104,9 +108,9 @@ class AtletaView extends InterfaceWeb {
                         <br>
                     <p>
                         <button name='acao' type='submit' value='inc'>Incluir</button>
-                        <button name='acao' type='submit' value='alt'>Alterar</button>
-                        <button name='acao' type='submit' value='exc'>Excluir</button>
-                        <button name='acao' type='submit' value='nov'>Novo</button>
+                        <button name='acao' type='submit' value='alt' {$btnDisabled}>Alterar</button>
+                        <button name='acao' type='submit' value='exc' {$btnDisabled}>Excluir</button>
+                        <button name='acao' type='submit' value='nov' {$btnDisabled}>Novo</button>
                     </p>
                 </form> 
             </div>";

@@ -18,6 +18,8 @@
  * 
  * @author Elymar Pereira Cabral <elymar.cabral@ifg.edu.br>
  */
+require_once 'tconnection.class.php';
+
 final class TTransaction {
 
     private static $conexao = null;

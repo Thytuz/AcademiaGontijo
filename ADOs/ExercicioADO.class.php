@@ -1,11 +1,12 @@
 <?php
 
 require_once 'adopdoabstract.class.php';
+require_once '../Classes/atributosbdacademia.class.php';
 
 class ExercicioAdo extends AdoPdoAbstract {
 
     public function __construct() {
-        parent::__construct();
+        parent::__construct(new AtributosBdAcademia);
         parent::setNomeDaTabela("Exercicios");
     }
 

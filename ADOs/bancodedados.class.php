@@ -45,7 +45,8 @@ class BancoDeDados /* extends PDO */ {
      * @param type $atributosBd Classe com os dados para conexão e seleção do banco de dados.
      * @return type
      */
-    function __construct() {
+    function __construct($atributosBd) {
+        $this->atributosBd = $atributosBd;
         $this->host = "localhost";
         $this->usuario = "academia";
         $this->senha = "academia";

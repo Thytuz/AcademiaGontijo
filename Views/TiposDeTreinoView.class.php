@@ -66,7 +66,10 @@ class TiposDeTreinoView extends InterfaceWeb {
     }
 
     protected function montaFieldsetDados($tiposDeTreinoModel) {
-
+        $btnDisabled = null;
+        if ($tiposDeTreinoModel->getTptrId() == null) {
+            $btnDisabled = "disabled";
+        }
 
         $fieldset = "<fieldset><legend>Tipo De Treinos</legend>";
 
@@ -78,9 +81,9 @@ class TiposDeTreinoView extends InterfaceWeb {
                     <label>Descrição</label><textarea rows='4' cols='50' id ='nome' name='tptrDescricao'>{$tiposDeTreinoModel->getTpTrDescricao()}</textarea><br>   
                     <p>
                         <button name='acao' type='submit' value='inc'>Incluir</button>
-                        <button name='acao' type='submit' value='alt'>Alterar</button>
-                        <button name='acao' type='submit' value='exc'>Excluir</button>
-                        <button name='acao' type='submit' value='nov'>Novo</button>
+                        <button name='acao' type='submit' value='alt' {$btnDisabled}>Alterar</button>
+                        <button name='acao' type='submit' value='exc' {$btnDisabled}>Excluir</button>
+                        <button name='acao' type='submit' value='nov' {$btnDisabled}>Novo</button>
                     </p>
                 </form> 
             </div>";

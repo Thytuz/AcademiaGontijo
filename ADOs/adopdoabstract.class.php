@@ -22,6 +22,7 @@
  */
 require_once 'bancodedados.class.php';
 require_once '../Classes/strings.class.php';
+require_once '../ADOs/ttransaction.class.php';
 
 abstract class AdoPdoAbstract extends BancoDeDados {
 

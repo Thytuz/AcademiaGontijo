@@ -85,7 +85,7 @@ class TreinoView extends InterfaceWeb {
                         <input type='text' name='tremSerie' id='tremSerie' value='0'>
                         <br>
                         
-                        <label>Tempo</label>
+                        <label>Tempo (min) </label>
                         <input type='text' name='tremTempo' id='tremTempo' placeholder='min' value='0'>
                         <br>
                         
@@ -93,7 +93,7 @@ class TreinoView extends InterfaceWeb {
 
 
         if (is_array($treinoModel)) {
-            $fieldset .= "<table style='width:100%'>
+            $fieldset .= "<table align='left' style='width:100%'>
                             <tr>
                                 <th>Tipo de Treino</th>
                                 <th>Exercício</th>
@@ -101,19 +101,29 @@ class TreinoView extends InterfaceWeb {
                                 <th>Séries</th>
                                 <th>Repetições</th>
                                 <th>Tempo</th>
+                                <th>Excluir</th>
                             </tr>";
             foreach ($treinoModel as $treino) {
                 $tiposDeTreino = $this->buscaTiposDeTreinoPorTreinoTptrId($treino->getTrenTptrId());
-                $treinamento = $this->buscaTreinamentoDoAtleta($treino->getTrenId());
-                $exercicio = $this->buscaExerciciosPorTremExerId($treinamento->getTremExerId());
-                $fieldset .= " <tr>
+                $ArrayTreinamentoModel = $this->buscaTreinamentoDoAtleta($treino->getTrenId());
+                foreach ($ArrayTreinamentoModel as $treinamentoModel) {
+                    $exercicio = $this->buscaExerciciosPorTremExerId($treinamentoModel->getTremExerId());
+                    $fieldset .= "<tr>
                                 <td>{$tiposDeTreino->getTptrNome()}</td>
                                 <td>{$exercicio->getExerNome()}</td>
                                 <td>{$treino->getTrenSeq()}</td>
-                                <td>{$treinamento->getTremSerie()}</td>
-                                <td>{$treinamento->getTremRepeticao()}</td>
-                                <td>{$treinamento->getTremTemp()}</td>
+                                <td>{$treinamentoModel->getTremSerie()}</td>
+                                <td>{$treinamentoModel->getTremRepeticao()}</td>
+                                <td>{$treinamentoModel->getTremTemp()}</td>
+                                <td>
+                                    <form id='form' action='' method='POST'>
+                                    <input type='hidden' value='{$treinamentoModel->getTremExerId()}'/>
+                                    <input type='hidden' value='{$treinamentoModel->getTremTrenId()}'/>
+                                    <button name='acao' type='submit' value='exc' style='margin-left:0px;'>Excluir</button>
+                                    </form>
+                                </td>
                             </tr>";
+                }
             }
             $fieldset .= "   </table>
                 </form> 
@@ -231,7 +241,7 @@ class TreinoView extends InterfaceWeb {
     public function buscaTreinamentoDoAtleta($trenId) {
         $treinamentoAdo = new TreinamentoAdo();
         $where = " trem_tren_id = ?";
-        $treinamentoModel = $treinamentoAdo->buscaObjetoComPs(array($trenId), $where);
+        $treinamentoModel = $treinamentoAdo->buscaArrayObjetoComPs(array($trenId), $where);
         return $treinamentoModel;
     }
 
