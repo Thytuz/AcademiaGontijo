@@ -30,7 +30,7 @@ class ExercicioView extends InterfaceWeb {
         return $optionsDosExercicios;
     }
 
-    private function montaOptionsDaConsultaDeTiposDeTreino() {
+    private function montaOptionsDaConsultaDeTiposDeTreino($exercicioModel) {
         $tiposDeTreinoAdo = new TiposDeTreinoAdo();
         $buscou = $tiposDeTreinosModel = $tiposDeTreinoAdo->buscaArrayObjetoComPs(array(), 1, "order by tptr_nome");
         if ($buscou) {
@@ -44,9 +44,13 @@ class ExercicioView extends InterfaceWeb {
             $tiposDeTreinosModel = array();
         }
 
+        $selected = null;
         $optionsDosTiposDeTreino = null;
         foreach ($tiposDeTreinosModel as $tiposDetreinoModel) {
-            $optionsDosTiposDeTreino .= "\n\t\t\t<option value='{$tiposDetreinoModel->getTptrId()}'>{$tiposDetreinoModel->getTptrNome()}</option>";
+            if ($tiposDetreinoModel->getTptrId() == $exercicioModel->getExerTptrId()) {
+                $selected = "selected";
+            }
+            $optionsDosTiposDeTreino .= "\n\t\t\t<option value='{$tiposDetreinoModel->getTptrId()}' $selected>{$tiposDetreinoModel->getTptrNome()}</option>";
         }
 
         return $optionsDosTiposDeTreino;
@@ -95,7 +99,7 @@ class ExercicioView extends InterfaceWeb {
             $btnDisabled = "disabled";
         }
 
-        $optionsDosTiposDeTreino = $this->montaOptionsDaConsultaDeTiposDeTreino();
+        $optionsDosTiposDeTreino = $this->montaOptionsDaConsultaDeTiposDeTreino($exercicioModel);
 
         $fieldset = "<fieldset><legend>Exercicios</legend>";
 

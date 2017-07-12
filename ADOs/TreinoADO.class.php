@@ -14,8 +14,18 @@ class TreinoAdo extends AdoPdoAbstract {
         
     }
 
-    public function excluiObjeto(\ModelAbstract $objetoModel) {
-        
+    public function excluiObjeto(\ModelAbstract $treinoModel) {
+        $where = 'tren_id = ' . (int) $treinoModel->getTrenId();
+
+        $query = parent::montaDeleteDoObjeto(parent::getNomeDaTabela(), $where);
+
+        if ($this->executaPs($query, array())) {
+            $this->setMensagem("Treino foi exclu&iacute;da com sucesso!");
+            return true;
+        } else {
+            $this->setMensagem("Treino n&atilde;o foi exclu&iacute;da. Erro no BD. Contate o analista.");
+            return false;
+        }
     }
 
     public function insereObjeto(\ModelAbstract $treinoModel) {

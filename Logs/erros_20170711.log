@@ -18,3 +18,27 @@ Query executada: insert into Treinamentos  (`trem_tren_id`, `trem_exer_id`, `tre
 Hora: 21:32:13 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
 Query executada: insert into Treinamentos  (`trem_tren_id`, `trem_exer_id`, `trem_temp`, `trem_repeticao`, `trem_serie`)  values ((?), (?), (?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-1' for key 'PRIMARY'
 
+===================================================================================
+Hora: 21:42:27 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinamentos  (`trem_tren_id`, `trem_exer_id`, `trem_temp`, `trem_repeticao`, `trem_serie`)  values ((?), (?), (?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-5' for key 'PRIMARY'
+
+===================================================================================
+Hora: 21:42:48 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinamentos  (`trem_tren_id`, `trem_exer_id`, `trem_temp`, `trem_repeticao`, `trem_serie`)  values ((?), (?), (?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-5' for key 'PRIMARY'
+
+===================================================================================
+Hora: 21:43:03 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinamentos  (`trem_tren_id`, `trem_exer_id`, `trem_temp`, `trem_repeticao`, `trem_serie`)  values ((?), (?), (?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-5' for key 'PRIMARY'
+
+===================================================================================
+Hora: 21:45:38 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinos  (`tren_atle_id`, `tren_seq`, `tren_tptr_id`)  values ((?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'tren_atle_id' cannot be null
+
+===================================================================================
+Hora: 21:59:04 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinos  (`tren_atle_id`, `tren_seq`, `tren_tptr_id`)  values ((?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'tren_atle_id' cannot be null
+
+===================================================================================
+Hora: 22:01:59 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinos  (`tren_atle_id`, `tren_seq`, `tren_tptr_id`)  values ((?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'tren_atle_id' cannot be null
+

@@ -27,7 +27,8 @@ class TreinoView extends InterfaceWeb {
     }
 
     public function montaFieldsetConsulta() {
-        $optionsAtletas = $this->montaOptionsAtletas();
+        $treinoModel = new TreinoModel();
+        $optionsAtletas = $this->montaOptionsAtletas($treinoModel);
 
         $fieldset = "<fieldset><legend>Consulta</legend>";
         $fieldset .= "
@@ -46,10 +47,8 @@ class TreinoView extends InterfaceWeb {
         return $fieldset;
     }
 
-    public function montaFieldSetDados($treinoModel = null) {
+    public function montaFieldSetDados($ArrayDeTreinoModel) {
         $optionsAtletas = $this->montaOptionsAtletas();
-//        $exercicioAdo = new ExercicioAdo();
-//        $exercicioAdo->buscaExerciciosPorTipoDeTreino(1);
         $optionsTiposDeTreino = $this->montaOptionsTiposDeTreino();
 
         $fieldset = "
@@ -89,10 +88,10 @@ class TreinoView extends InterfaceWeb {
                         <input type='text' name='tremTempo' id='tremTempo' placeholder='min' value='0'>
                         <br>
                         
-                        <center><button name='acao' id='adicionar' value='inc'>Adicionar</button></center>";
+                        <center><button name='acao' id='adicionar' value='inc'>Adicionar</button></center>
+                        </form>";
 
-
-        if (is_array($treinoModel)) {
+        if (is_array($ArrayDeTreinoModel)) {
             $fieldset .= "<table align='left' style='width:100%'>
                             <tr>
                                 <th>Tipo de Treino</th>
@@ -103,22 +102,22 @@ class TreinoView extends InterfaceWeb {
                                 <th>Tempo</th>
                                 <th>Excluir</th>
                             </tr>";
-            foreach ($treinoModel as $treino) {
-                $tiposDeTreino = $this->buscaTiposDeTreinoPorTreinoTptrId($treino->getTrenTptrId());
-                $ArrayTreinamentoModel = $this->buscaTreinamentoDoAtleta($treino->getTrenId());
+            foreach ($ArrayDeTreinoModel as $treinoModel) {
+                $tiposDeTreino = $this->buscaTiposDeTreinoPorTreinoTptrId($treinoModel->getTrenTptrId());
+                $ArrayTreinamentoModel = $this->buscaTreinamentoDoAtleta($treinoModel->getTrenId());
                 foreach ($ArrayTreinamentoModel as $treinamentoModel) {
                     $exercicio = $this->buscaExerciciosPorTremExerId($treinamentoModel->getTremExerId());
                     $fieldset .= "<tr>
                                 <td>{$tiposDeTreino->getTptrNome()}</td>
                                 <td>{$exercicio->getExerNome()}</td>
-                                <td>{$treino->getTrenSeq()}</td>
+                                <td>{$treinoModel->getTrenSeq()}</td>
                                 <td>{$treinamentoModel->getTremSerie()}</td>
                                 <td>{$treinamentoModel->getTremRepeticao()}</td>
                                 <td>{$treinamentoModel->getTremTemp()}</td>
                                 <td>
-                                    <form id='form' action='' method='POST'>
-                                    <input type='hidden' value='{$treinamentoModel->getTremExerId()}'/>
-                                    <input type='hidden' value='{$treinamentoModel->getTremTrenId()}'/>
+                                    <form id='formExc' action='' method='POST'>
+                                    <input type='hidden' value='{$treinamentoModel->getTremExerId()}' name='exerIdExc' id='exerIdExc'/>
+                                    <input type='hidden' value='{$treinamentoModel->getTremTrenId()}' name='trenIdExc' id='trenIdExc'/>
                                     <button name='acao' type='submit' value='exc' style='margin-left:0px;'>Excluir</button>
                                     </form>
                                 </td>
@@ -126,12 +125,10 @@ class TreinoView extends InterfaceWeb {
                 }
             }
             $fieldset .= "   </table>
-                </form> 
             </div>
         </fieldset>";
         } else {
-            $fieldset .= "</form> 
-            </div>
+            $fieldset .= "</div>
         </fieldset>";
         }
 
@@ -169,6 +166,17 @@ class TreinoView extends InterfaceWeb {
         } else {
             return null;
         }
+    }
+
+    public function recebeDadosExclusao() {
+        $exerId = $_POST['exerIdExc'];
+        $trenId = $_POST['trenIdExc'];
+
+        $treinamentoModel = new TreinamentoModel();
+        $treinamentoModel->setTremExerId($exerId);
+        $treinamentoModel->setTremTrenId($trenId);
+
+        return $treinamentoModel;
     }
 
     public function montaOptionsAtletas() {

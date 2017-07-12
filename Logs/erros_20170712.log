@@ -1,0 +1,40 @@
+===================================================================================
+Hora: 02:23:42 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinamentos  (`trem_tren_id`, `trem_exer_id`, `trem_temp`, `trem_repeticao`, `trem_serie`)  values ((?), (?), (?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-10' for key 'PRIMARY'
+
+===================================================================================
+Hora: 02:26:49 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinamentos  (`trem_tren_id`, `trem_exer_id`, `trem_temp`, `trem_repeticao`, `trem_serie`)  values ((?), (?), (?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-11' for key 'PRIMARY'
+
+===================================================================================
+Hora: 02:27:09 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinamentos  (`trem_tren_id`, `trem_exer_id`, `trem_temp`, `trem_repeticao`, `trem_serie`)  values ((?), (?), (?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-11' for key 'PRIMARY'
+
+===================================================================================
+Hora: 02:27:33 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinamentos  (`trem_tren_id`, `trem_exer_id`, `trem_temp`, `trem_repeticao`, `trem_serie`)  values ((?), (?), (?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-11' for key 'PRIMARY'
+
+===================================================================================
+Hora: 02:28:06 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinamentos  (`trem_tren_id`, `trem_exer_id`, `trem_temp`, `trem_repeticao`, `trem_serie`)  values ((?), (?), (?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-11' for key 'PRIMARY'
+
+===================================================================================
+Hora: 02:28:59 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinamentos  (`trem_tren_id`, `trem_exer_id`, `trem_temp`, `trem_repeticao`, `trem_serie`)  values ((?), (?), (?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-11' for key 'PRIMARY'
+
+===================================================================================
+Hora: 02:31:08 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinamentos  (`trem_tren_id`, `trem_exer_id`, `trem_temp`, `trem_repeticao`, `trem_serie`)  values ((?), (?), (?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '3-12' for key 'PRIMARY'
+
+===================================================================================
+Hora: 02:44:07 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: select * from Treinamentos where where trem_tren_id = ?  : EXECUTE : SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'where trem_tren_id = '13'' at line 1
+
+===================================================================================
+Hora: 02:44:18 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: select * from Treinamentos where where trem_tren_id = ?  : EXECUTE : SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'where trem_tren_id = '13'' at line 1
+
+===================================================================================
+Hora: 03:50:09 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: select * from Treinamentos where where trem_tren_id = ?  : EXECUTE : SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'where trem_tren_id = '14'' at line 1
+

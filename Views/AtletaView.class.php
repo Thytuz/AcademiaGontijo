@@ -82,7 +82,7 @@ class AtletaView extends InterfaceWeb {
             }
         }
 
-        $optionsDosTreinadores = $this->montaOptionsDeTreinadores();
+        $optionsDosTreinadores = $this->montaOptionsDeTreinadores($atletaModel);
 
         $fieldset = "<fieldset><legend>Dados do Atleta</legend>";
 
@@ -120,7 +120,7 @@ class AtletaView extends InterfaceWeb {
         return $fieldset;
     }
 
-    private function montaOptionsDeTreinadores() {
+    private function montaOptionsDeTreinadores($atletaModel) {
         $treinadorAdo = new TreinadorAdo();
         $buscou = $treinadoresModel = $treinadorAdo->buscaArrayObjetoComPs(array(), 1, "order by trei_nome");
         if ($buscou) {
@@ -134,9 +134,13 @@ class AtletaView extends InterfaceWeb {
             $treinadoresModel = array();
         }
 
+        $selected = null;
         $optionsDosTreinadores = null;
         foreach ($treinadoresModel as $treinadorModel) {
-            $optionsDosTreinadores .= "\n\t\t\t<option value='{$treinadorModel->getTreiId()}'>{$treinadorModel->getTreiNome()}</option>";
+            if ($treinadorModel->getTreiId() == $atletaModel->getAtleTreiId()) {
+                $selected = "selected";
+            }
+            $optionsDosTreinadores .= "\n\t\t\t<option value='{$treinadorModel->getTreiId()}' $selected>{$treinadorModel->getTreiNome()}</option>";
         }
 
         return $optionsDosTreinadores;

@@ -13,8 +13,18 @@ class TreinamentoAdo extends AdoPdoAbstract {
         
     }
 
-    public function excluiObjeto(\ModelAbstract $objetoModel) {
-        
+    public function excluiObjeto(\ModelAbstract $treinamentoModel) {
+        $where = 'trem_tren_id = ' . (int) $treinamentoModel->getTremTrenId() . ' and trem_exer_id = ' . (int) $treinamentoModel->getTremExerId();
+
+        $query = parent::montaDeleteDoObjeto(parent::getNomeDaTabela(), $where);
+
+        if ($this->executaPs($query, array())) {
+            $this->setMensagem("Treinamento foi exclu&iacute;da com sucesso!");
+            return true;
+        } else {
+            $this->setMensagem("Treinamento n&atilde;o foi exclu&iacute;da. Erro no BD. Contate o analista.");
+            return false;
+        }
     }
 
     public function insereObjeto(\ModelAbstract $treinamentoModel) {

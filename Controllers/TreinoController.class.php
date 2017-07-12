@@ -25,11 +25,15 @@ class TreinoController {
 
         $this->acao = $this->treinoView->getAcao();
         switch ($this->acao) {
+            case 'exc':
+                $this->excluiObjeto();
+
+                break;
+
             case 'inc':
                 $this->incluiObjeto();
 
                 break;
-
             case 'con':
                 $this->consultaObjeto();
 
@@ -37,11 +41,6 @@ class TreinoController {
 
             case 'alt':
                 $this->alteraObjeto();
-
-                break;
-
-            case 'exc':
-                $this->excluiObjeto();
 
                 break;
 
@@ -69,8 +68,10 @@ class TreinoController {
         $idTreinoOuFalso = $this->checaEntradaDuplicada($this->treinoModel);
         if ($idTreinoOuFalso != false) {
             $this->treinamentoModel->setTremTrenId($idTreinoOuFalso);
+
             if ($this->treinamentoAdo->insereObjeto($this->treinamentoModel)) {
                 $this->treinoView->adicionaEmMensagens("Treino incluído com sucesso!");
+                $this->acao = 'con';
             } else {
                 $this->treinoView->adicionaEmMensagens("Este treinamento já consta na sequencia do atleta!");
             }
@@ -83,6 +84,7 @@ class TreinoController {
                 if ($this->criaTreinamento()) {
                     $this->treinoAdo->validaTransacao();
                     $this->treinoView->adicionaEmMensagens("Treino incluído com sucesso!");
+                    $this->acao = 'con';
                 } else {
                     $this->treinoAdo->descartaTransacao();
                 }
@@ -121,7 +123,17 @@ class TreinoController {
     }
 
     private function excluiObjeto() {
-        
+        $treinamentoModel = $this->treinoView->recebeDadosExclusao();
+        if ($this->treinamentoAdo->excluiObjeto($treinamentoModel)) {
+            if ($this->checaSeTodoOTreinamentoDoTreinoFoiExcluidoEExcluiTreino($treinamentoModel)) {
+                $this->treinoView->adicionaEmMensagens("Treinamento excluido com sucesso!");
+            } else {
+                $this->treinoView->adicionaEmMensagens("Erro ao excluir Treinamento. Contate o analista");
+            }
+        } else {
+            $this->treinoView->adicionaEmMensagens("Erro ao excluir Treinamento. Contate o analista");
+        }
+        $this->acao = 'con';
     }
 
     protected function checaDados($treinoModel) {
@@ -130,7 +142,9 @@ class TreinoController {
 
     public function checaEntradaDuplicada($treinoModel) {
         $arrayDeTreinos = $this->treinoAdo->buscaArrayObjetoComPs(array(), 1);
-
+        if ($arrayDeTreinos == 0) {
+            return false;
+        }
         foreach ($arrayDeTreinos as $treino) {
             if ($treino->getTrenAtleId() == $treinoModel->getTrenAtleId()) {
                 if ($treino->getTrenSeq() == $treinoModel->getTrenSeq()) {
@@ -167,6 +181,17 @@ class TreinoController {
             return false;
         }
         return $executou;
+    }
+
+    public function checaSeTodoOTreinamentoDoTreinoFoiExcluidoEExcluiTreino($treinamentoModel) {
+        $arrayDeTreinamento = $this->treinamentoAdo->buscaArrayObjetoComPs(array($treinamentoModel->getTremTrenId()), "where trem_tren_id = ?");
+        if ($arrayDeTreinamento == 0) {
+            if ($this->treinoAdo->excluiObjeto(new TreinoModel($treinamentoModel->getTremTrenId()))) {
+                return true;
+            } else {
+                return false;
+            }
+        }
     }
 
 }
