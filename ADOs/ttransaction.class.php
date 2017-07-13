@@ -38,7 +38,7 @@ final class TTransaction {
      * do BD
      * @param String $nomeDoArquivoIni Nome do arquivo ini com os dados do BD
      */
-    public static function open(AtributosBdAbstract $atributosBD, $nomeDoArquivoIni = "/FabricaDeSoftware/fsw/Default/bd_mysql.ini") {
+    public static function open(AtributosBdAbstract $atributosBD, $nomeDoArquivoIni = "/AcademiaGontijo/Default/bd_mysql.ini") {
         //abre uma conexão e armazena na propriedade estática $conexao
         if (empty(self::$conexao)) {
             try {

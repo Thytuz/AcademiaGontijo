@@ -28,7 +28,7 @@ final class TConnection {
         //vazio
     }
 
-    public static function open(AtributosBdAbstract $atributosBD, $nomeDoArquivoIni = "/FabricaDeSoftware/fsw/Default/bd_mysql.ini") {
+    public static function open(AtributosBdAbstract $atributosBD, $nomeDoArquivoIni = "/AcademiaGontijo/Default/bd_mysql.ini") {
         //inicia variáveis locais da conexão
         $options = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
         $confUTF8 = "charset=utf8";

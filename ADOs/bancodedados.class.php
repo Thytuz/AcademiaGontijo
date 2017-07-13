@@ -378,7 +378,7 @@ class BancoDeDados /* extends PDO */ {
      */
     public function iniciaTransacao() {
         try {
-            if (TTransaction::open($this->atributosBd, $_SERVER['DOCUMENT_ROOT'] . "/FabricaDeSoftware/fsw/Default/bd_mysql.ini")) {
+            if (TTransaction::open($this->atributosBd, $_SERVER['DOCUMENT_ROOT'] . "/AcademiaGontijo/Default/bd_mysql.ini")) {
                 $this->conexaoParaTransacoesMultiobjetos = TTransaction::getConexao();
             } else {
                 return false;

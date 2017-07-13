@@ -34,7 +34,7 @@ Abstract Class AtributosBdAbstract {
     function __construct($bdNome) {
         $this->bdNome = $bdNome;
 
-        $nomeDoArquivoIni = $_SERVER['DOCUMENT_ROOT'] . "/FabricaDeSoftware/fsw/Default/bd_mysql.ini";
+        $nomeDoArquivoIni = $_SERVER['DOCUMENT_ROOT'] . "/AcademiaGontijo/Default/bd_mysql.ini";
         if (file_exists($nomeDoArquivoIni)) {
             //Recupera dados do arquivo em formado de array (o arquivo deve estar em formato de arquivo ini).
             $bd = parse_ini_file($nomeDoArquivoIni);
