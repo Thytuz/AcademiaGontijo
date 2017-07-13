@@ -44,13 +44,13 @@ class ExercicioView extends InterfaceWeb {
             $tiposDeTreinosModel = array();
         }
 
-        $selected = null;
         $optionsDosTiposDeTreino = null;
         foreach ($tiposDeTreinosModel as $tiposDetreinoModel) {
             if ($tiposDetreinoModel->getTptrId() == $exercicioModel->getExerTptrId()) {
-                $selected = "selected";
+                $optionsDosTiposDeTreino .= "\n\t\t\t<option value='{$tiposDetreinoModel->getTptrId()}' selected>{$tiposDetreinoModel->getTptrNome()}</option>";
+            } else {
+                $optionsDosTiposDeTreino .= "\n\t\t\t<option value='{$tiposDetreinoModel->getTptrId()}'>{$tiposDetreinoModel->getTptrNome()}</option>";
             }
-            $optionsDosTiposDeTreino .= "\n\t\t\t<option value='{$tiposDetreinoModel->getTptrId()}' $selected>{$tiposDetreinoModel->getTptrNome()}</option>";
         }
 
         return $optionsDosTiposDeTreino;
