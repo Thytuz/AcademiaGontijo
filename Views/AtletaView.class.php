@@ -134,13 +134,13 @@ class AtletaView extends InterfaceWeb {
             $treinadoresModel = array();
         }
 
+        $selected = null;
         $optionsDosTreinadores = null;
         foreach ($treinadoresModel as $treinadorModel) {
             if ($treinadorModel->getTreiId() == $atletaModel->getAtleTreiId()) {
-                $optionsDosTreinadores .= "\n\t\t\t<option value='{$treinadorModel->getTreiId()}' selected>{$treinadorModel->getTreiNome()}</option>";
-            } else {
-                $optionsDosTreinadores .= "\n\t\t\t<option value='{$treinadorModel->getTreiId()}'>{$treinadorModel->getTreiNome()}</option>";
+                $selected = "selected";
             }
+            $optionsDosTreinadores .= "\n\t\t\t<option value='{$treinadorModel->getTreiId()}' $selected>{$treinadorModel->getTreiNome()}</option>";
         }
 
         return $optionsDosTreinadores;

@@ -71,7 +71,7 @@ class TreinoController {
 
             if ($this->treinamentoAdo->insereObjeto($this->treinamentoModel)) {
                 $this->treinoView->adicionaEmMensagens("Treino incluído com sucesso!");
-                $this->acao = "con";
+                $this->acao = 'con';
             } else {
                 $this->treinoView->adicionaEmMensagens("Este treinamento já consta na sequencia do atleta!");
             }
