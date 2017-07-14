@@ -1,0 +1,312 @@
+===================================================================================
+Hora: 13:17:43 | Script: /AcademiaGontijo/Modulos/MantemTreinador.php
+Query executada: insert into Treinadores  (`trei_id`, `trei_nome`, `trei_sexo`)  values ((?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:18:56 | Script: /AcademiaGontijo/Modulos/MantemAtleta.php
+Query executada: insert into Atletas  (`atle_id`, `atle_nome`, `atle_cpf`, `atle_dt_nasc`, `atle_sexo`, `atle_peso`, `atle_altura`, `atle_pretencao`, `atle_obs`, `atle_trei_id`)  values ((?), (?), (?), (?), (?), (?), (?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:19:23 | Script: /AcademiaGontijo/Modulos/MantemTipoDeTreino.php
+Query executada: insert into TiposDeTreinos  (`tptr_id`, `tptr_nome`, `tptr_descricao`)  values ((?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:19:47 | Script: /AcademiaGontijo/Modulos/MantemTipoDeTreino.php
+Query executada: insert into TiposDeTreinos  (`tptr_id`, `tptr_nome`, `tptr_descricao`)  values ((?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:20:45 | Script: /AcademiaGontijo/Modulos/MantemExercicio.php
+Query executada: insert into Exercicios  (`exer_id`, `exer_nome`, `exer_descricao`, `exer_tptr_id`)  values ((?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:22:08 | Script: /AcademiaGontijo/Modulos/MantemExercicio.php
+Query executada: update Exercicios set `exer_id` =  (?), `exer_nome` =  (?), `exer_descricao` =  (?), `exer_tptr_id` =  (?) where  exer_id = ?  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:22:33 | Script: /AcademiaGontijo/Modulos/MantemExercicio.php
+Query executada: update Exercicios set `exer_id` =  (?), `exer_nome` =  (?), `exer_descricao` =  (?), `exer_tptr_id` =  (?) where  exer_id = ?  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:24:37 | Script: /AcademiaGontijo/Modulos/MantemExercicio.php
+Query executada: insert into Exercicios  (`exer_id`, `exer_nome`, `exer_descricao`, `exer_tptr_id`)  values ((?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:25:25 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinos  (`tren_id`, `tren_atle_id`, `tren_seq`, `tren_tptr_id`)  values ((?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:25:25 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinamentos  (`trem_tren_id`, `trem_exer_id`, `trem_temp`, `trem_repeticao`, `trem_serie`)  values ((?), (?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:26:33 | Script: /AcademiaGontijo/Modulos/MantemExercicio.php
+Query executada: insert into Exercicios  (`exer_id`, `exer_nome`, `exer_descricao`, `exer_tptr_id`)  values ((?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:26:43 | Script: /AcademiaGontijo/Modulos/MantemExercicio.php
+Query executada: insert into Exercicios  (`exer_id`, `exer_nome`, `exer_descricao`, `exer_tptr_id`)  values ((?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:26:49 | Script: /AcademiaGontijo/Modulos/MantemExercicio.php
+Query executada: insert into Exercicios  (`exer_id`, `exer_nome`, `exer_descricao`, `exer_tptr_id`)  values ((?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:28:11 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinos  (`tren_id`, `tren_atle_id`, `tren_seq`, `tren_tptr_id`)  values ((?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:28:11 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinamentos  (`trem_tren_id`, `trem_exer_id`, `trem_temp`, `trem_repeticao`, `trem_serie`)  values ((?), (?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:29:33 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinos  (`tren_id`, `tren_atle_id`, `tren_seq`, `tren_tptr_id`)  values ((?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:29:33 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinamentos  (`trem_tren_id`, `trem_exer_id`, `trem_temp`, `trem_repeticao`, `trem_serie`)  values ((?), (?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:32:54 | Script: /AcademiaGontijo/Modulos/MantemExercicio.php
+Query executada: delete from Exercicios where  exer_id = ?  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:33:01 | Script: /AcademiaGontijo/Modulos/MantemExercicio.php
+Query executada: delete from Exercicios where  exer_id = ?  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:33:20 | Script: /AcademiaGontijo/Modulos/MantemExercicio.php
+Query executada: delete from Exercicios where  exer_id = ?  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:33:47 | Script: /AcademiaGontijo/Modulos/MantemExercicio.php
+Query executada: delete from Exercicios where  exer_id = ?  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:34:20 | Script: /AcademiaGontijo/Modulos/MantemExercicio.php
+Query executada: update Exercicios set `exer_id` =  (?), `exer_nome` =  (?), `exer_descricao` =  (?), `exer_tptr_id` =  (?) where  exer_id = ?  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:41:19 | Script: /AcademiaGontijo/Modulos/MantemTreinador.php
+Query executada: insert into Treinadores  (`trei_id`, `trei_nome`, `trei_sexo`)  values ((?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:41:30 | Script: /AcademiaGontijo/Modulos/MantemTreinador.php
+Query executada: insert into Treinadores  (`trei_id`, `trei_nome`, `trei_sexo`)  values ((?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:41:39 | Script: /AcademiaGontijo/Modulos/MantemTreinador.php
+Query executada: insert into Treinadores  (`trei_id`, `trei_nome`, `trei_sexo`)  values ((?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:42:35 | Script: /AcademiaGontijo/Modulos/MantemTipoDeTreino.php
+Query executada: insert into TiposDeTreinos  (`tptr_id`, `tptr_nome`, `tptr_descricao`)  values ((?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:42:45 | Script: /AcademiaGontijo/Modulos/MantemTipoDeTreino.php
+Query executada: insert into TiposDeTreinos  (`tptr_id`, `tptr_nome`, `tptr_descricao`)  values ((?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:42:49 | Script: /AcademiaGontijo/Modulos/MantemTipoDeTreino.php
+Query executada: insert into TiposDeTreinos  (`tptr_id`, `tptr_nome`, `tptr_descricao`)  values ((?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:43:36 | Script: /AcademiaGontijo/Modulos/MantemTipoDeTreino.php
+Query executada: delete from TiposDeTreinos where  tptr_id = ?  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:43:41 | Script: /AcademiaGontijo/Modulos/MantemTipoDeTreino.php
+Query executada: delete from TiposDeTreinos where  tptr_id = ?  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:43:45 | Script: /AcademiaGontijo/Modulos/MantemTipoDeTreino.php
+Query executada: delete from TiposDeTreinos where  tptr_id = ?  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:44:27 | Script: /AcademiaGontijo/Modulos/MantemTipoDeTreino.php
+Query executada: insert into TiposDeTreinos  (`tptr_id`, `tptr_nome`, `tptr_descricao`)  values ((?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:45:18 | Script: /AcademiaGontijo/Modulos/MantemExercicio.php
+Query executada: insert into Exercicios  (`exer_id`, `exer_nome`, `exer_descricao`, `exer_tptr_id`)  values ((?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:45:44 | Script: /AcademiaGontijo/Modulos/MantemExercicio.php
+Query executada: insert into Exercicios  (`exer_id`, `exer_nome`, `exer_descricao`, `exer_tptr_id`)  values ((?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:46:30 | Script: /AcademiaGontijo/Modulos/MantemAtleta.php
+Query executada: insert into Atletas  (`atle_id`, `atle_nome`, `atle_cpf`, `atle_dt_nasc`, `atle_sexo`, `atle_peso`, `atle_altura`, `atle_pretencao`, `atle_obs`, `atle_trei_id`)  values ((?), (?), (?), (?), (?), (?), (?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:47:06 | Script: /AcademiaGontijo/Modulos/MantemAtleta.php
+Query executada: insert into Atletas  (`atle_id`, `atle_nome`, `atle_cpf`, `atle_dt_nasc`, `atle_sexo`, `atle_peso`, `atle_altura`, `atle_pretencao`, `atle_obs`, `atle_trei_id`)  values ((?), (?), (?), (?), (?), (?), (?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:48:02 | Script: /AcademiaGontijo/Modulos/MantemAtleta.php
+Query executada: insert into Atletas  (`atle_id`, `atle_nome`, `atle_cpf`, `atle_dt_nasc`, `atle_sexo`, `atle_peso`, `atle_altura`, `atle_pretencao`, `atle_obs`, `atle_trei_id`)  values ((?), (?), (?), (?), (?), (?), (?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:48:34 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinos  (`tren_id`, `tren_atle_id`, `tren_seq`, `tren_tptr_id`)  values ((?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:48:34 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinamentos  (`trem_tren_id`, `trem_exer_id`, `trem_temp`, `trem_repeticao`, `trem_serie`)  values ((?), (?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 14:01:00 | Script: /AcademiaGontijo/Modulos/MantemTipoDeTreino.php
+Query executada: insert into TiposDeTreinos  (`tptr_id`, `tptr_nome`, `tptr_descricao`)  values ((?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 14:01:32 | Script: /AcademiaGontijo/Modulos/MantemExercicio.php
+Query executada: insert into Exercicios  (`exer_id`, `exer_nome`, `exer_descricao`, `exer_tptr_id`)  values ((?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 14:01:49 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinos  (`tren_id`, `tren_atle_id`, `tren_seq`, `tren_tptr_id`)  values ((?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 14:01:49 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinamentos  (`trem_tren_id`, `trem_exer_id`, `trem_temp`, `trem_repeticao`, `trem_serie`)  values ((?), (?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 14:16:23 | Script: /AcademiaGontijo/Modulos/MantemTreinador.php
+Query executada: insert into Treinadores  (`trei_id`, `trei_nome`, `trei_sexo`)  values ((?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 14:16:44 | Script: /AcademiaGontijo/Modulos/MantemTreinador.php
+Query executada: insert into Treinadores  (`trei_id`, `trei_nome`, `trei_sexo`)  values ((?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 14:17:42 | Script: /AcademiaGontijo/Modulos/MantemTipoDeTreino.php
+Query executada: insert into TiposDeTreinos  (`tptr_id`, `tptr_nome`, `tptr_descricao`)  values ((?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 14:17:51 | Script: /AcademiaGontijo/Modulos/MantemTipoDeTreino.php
+Query executada: insert into TiposDeTreinos  (`tptr_id`, `tptr_nome`, `tptr_descricao`)  values ((?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 14:17:58 | Script: /AcademiaGontijo/Modulos/MantemTipoDeTreino.php
+Query executada: insert into TiposDeTreinos  (`tptr_id`, `tptr_nome`, `tptr_descricao`)  values ((?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 14:18:08 | Script: /AcademiaGontijo/Modulos/MantemTipoDeTreino.php
+Query executada: insert into TiposDeTreinos  (`tptr_id`, `tptr_nome`, `tptr_descricao`)  values ((?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 14:18:45 | Script: /AcademiaGontijo/Modulos/MantemExercicio.php
+Query executada: insert into Exercicios  (`exer_id`, `exer_nome`, `exer_descricao`, `exer_tptr_id`)  values ((?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 14:19:09 | Script: /AcademiaGontijo/Modulos/MantemExercicio.php
+Query executada: insert into Exercicios  (`exer_id`, `exer_nome`, `exer_descricao`, `exer_tptr_id`)  values ((?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 14:19:22 | Script: /AcademiaGontijo/Modulos/MantemExercicio.php
+Query executada: insert into Exercicios  (`exer_id`, `exer_nome`, `exer_descricao`, `exer_tptr_id`)  values ((?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 14:19:34 | Script: /AcademiaGontijo/Modulos/MantemExercicio.php
+Query executada: insert into Exercicios  (`exer_id`, `exer_nome`, `exer_descricao`, `exer_tptr_id`)  values ((?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 14:20:17 | Script: /AcademiaGontijo/Modulos/MantemAtleta.php
+Query executada: insert into Atletas  (`atle_id`, `atle_nome`, `atle_cpf`, `atle_dt_nasc`, `atle_sexo`, `atle_peso`, `atle_altura`, `atle_pretencao`, `atle_obs`, `atle_trei_id`)  values ((?), (?), (?), (?), (?), (?), (?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 14:20:55 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinos  (`tren_id`, `tren_atle_id`, `tren_seq`, `tren_tptr_id`)  values ((?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 14:20:55 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinamentos  (`trem_tren_id`, `trem_exer_id`, `trem_temp`, `trem_repeticao`, `trem_serie`)  values ((?), (?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 14:21:21 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinos  (`tren_id`, `tren_atle_id`, `tren_seq`, `tren_tptr_id`)  values ((?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 14:21:21 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinamentos  (`trem_tren_id`, `trem_exer_id`, `trem_temp`, `trem_repeticao`, `trem_serie`)  values ((?), (?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 14:21:50 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinos  (`tren_id`, `tren_atle_id`, `tren_seq`, `tren_tptr_id`)  values ((?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 14:21:50 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinamentos  (`trem_tren_id`, `trem_exer_id`, `trem_temp`, `trem_repeticao`, `trem_serie`)  values ((?), (?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 14:22:23 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinos  (`tren_id`, `tren_atle_id`, `tren_seq`, `tren_tptr_id`)  values ((?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 14:22:23 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinamentos  (`trem_tren_id`, `trem_exer_id`, `trem_temp`, `trem_repeticao`, `trem_serie`)  values ((?), (?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 14:22:44 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinos  (`tren_id`, `tren_atle_id`, `tren_seq`, `tren_tptr_id`)  values ((?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 14:22:44 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinamentos  (`trem_tren_id`, `trem_exer_id`, `trem_temp`, `trem_repeticao`, `trem_serie`)  values ((?), (?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 14:23:12 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinos  (`tren_id`, `tren_atle_id`, `tren_seq`, `tren_tptr_id`)  values ((?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 14:23:12 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinamentos  (`trem_tren_id`, `trem_exer_id`, `trem_temp`, `trem_repeticao`, `trem_serie`)  values ((?), (?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 14:23:27 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinos  (`tren_id`, `tren_atle_id`, `tren_seq`, `tren_tptr_id`)  values ((?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 14:23:27 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinamentos  (`trem_tren_id`, `trem_exer_id`, `trem_temp`, `trem_repeticao`, `trem_serie`)  values ((?), (?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 14:24:11 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinos  (`tren_id`, `tren_atle_id`, `tren_seq`, `tren_tptr_id`)  values ((?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 14:24:11 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinamentos  (`trem_tren_id`, `trem_exer_id`, `trem_temp`, `trem_repeticao`, `trem_serie`)  values ((?), (?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 14:29:33 | Script: /AcademiaGontijo/Modulos/MantemAtleta.php
+Query executada: insert into Atletas  (`atle_id`, `atle_nome`, `atle_cpf`, `atle_dt_nasc`, `atle_sexo`, `atle_peso`, `atle_altura`, `atle_pretencao`, `atle_obs`, `atle_trei_id`)  values ((?), (?), (?), (?), (?), (?), (?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 14:31:47 | Script: /AcademiaGontijo/Modulos/MantemExercicio.php
+Query executada: insert into Exercicios  (`exer_id`, `exer_nome`, `exer_descricao`, `exer_tptr_id`)  values ((?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 14:32:26 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinos  (`tren_id`, `tren_atle_id`, `tren_seq`, `tren_tptr_id`)  values ((?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 14:32:26 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinamentos  (`trem_tren_id`, `trem_exer_id`, `trem_temp`, `trem_repeticao`, `trem_serie`)  values ((?), (?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 14:35:41 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinos  (`tren_id`, `tren_atle_id`, `tren_seq`, `tren_tptr_id`)  values ((?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 14:35:41 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinamentos  (`trem_tren_id`, `trem_exer_id`, `trem_temp`, `trem_repeticao`, `trem_serie`)  values ((?), (?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 14:36:42 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinos  (`tren_id`, `tren_atle_id`, `tren_seq`, `tren_tptr_id`)  values ((?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 14:36:42 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinamentos  (`trem_tren_id`, `trem_exer_id`, `trem_temp`, `trem_repeticao`, `trem_serie`)  values ((?), (?), (?), (?), (?))  | Método: executaPs | ID do usuário Logado:
+

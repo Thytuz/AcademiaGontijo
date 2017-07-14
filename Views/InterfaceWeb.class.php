@@ -35,7 +35,34 @@ abstract class InterfaceWeb {
                   <script src='../JS/jquery-3.1.1.js'></script>
                   <script src='../JS/buscaopcoesparacombos.js'></script>
                   <script src='../JS/buscaoptionsparacombo.js'></script>
-            \n\t</head>\n\t<body>\n";
+                  <script src='../JS/menu.js'></script>
+                  <link rel='stylesheet' type='text/css' href='../CSS/estilo2.css' />
+                  <meta name='viewport' content='width=device-width,initial-scale=1' />
+            \n\t</head>\n\t<body>
+            <div class='pagina'>
+            <nav class='menu'>
+                <ul>
+                    <li class='amarelo'>
+                        <a href='../Modulos/Principal.php'>Home</a>
+                    </li>
+                    <li class='amarelo'>
+                        <a href='../Modulos/MantemAtleta.php'>Atletas</a>
+                    </li>
+                    <li class='amarelo'>
+                        <a href='../Modulos/MantemTreinador.php'>Treinadores</a>
+                    </li>
+                    <li class='amarelo'>
+                        <a href='../Modulos/MantemTipoDeTreino.php'>Tipos de Treinos</a>
+                    </li>
+                    <li class='amarelo'>
+                        <a href='../Modulos/MantemExercicio.php'>Excercicios</a>
+                    </li>
+                    <li class='amarelo'>
+                        <a href='../Modulos/MantemTreino.php'>Treinos</a>                        
+                    </li>
+                </ul> 
+            </nav>                
+        </div>\n";
     }
 
     abstract protected function montaCorpo($objeto);

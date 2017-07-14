@@ -22,6 +22,8 @@ class TiposDeTreinoView extends InterfaceWeb {
         }
 
         $optionsDosTiposDeTreino = null;
+        $optionsDosTiposDeTreino .= "\n\t\t\t<option value='-1'>Escolha um tipo de treino </option>";
+        
         foreach ($tiposDeTreinosModel as $tiposDetreinoModel) {
             $optionsDosTiposDeTreino .= "\n\t\t\t<option value='{$tiposDetreinoModel->getTptrId()}'>{$tiposDetreinoModel->getTptrNome()}</option>";
         }
@@ -32,7 +34,7 @@ class TiposDeTreinoView extends InterfaceWeb {
     protected function montaFieldsetConsulta() {
         $optionsDosTiposDeTreino = $this->montaOptionsDaConsultaDeTiposDeTreino();
 
-        $fieldset = "<fieldset><legend>Consulta</legend>";
+        $fieldset = "<fieldset style='width:64%; height:90%; margin-left: 16%;'><legend>Consulta</legend>";
 
         $fieldset .= "
             <div class='formulario'>
@@ -52,10 +54,8 @@ class TiposDeTreinoView extends InterfaceWeb {
     }
 
     protected function montaCorpo($tiposDeTreinoModel) {
-        $titulo = "<h3>Cadastro de Tipo De Treino</h3>";
-        $menus = new MenusView();
-        parent::adicionaAoCorpo($menus->montaMenus());
-
+        $titulo = "<h3>Cadastro de Tipo de Treinos</h3>";
+        
         parent::adicionaAoCorpo($titulo);
 
         $fieldsetConsulta = $this->montaFieldsetConsulta();
@@ -71,7 +71,7 @@ class TiposDeTreinoView extends InterfaceWeb {
             $btnDisabled = "disabled";
         }
 
-        $fieldset = "<fieldset><legend>Tipo De Treinos</legend>";
+        $fieldset = "<fieldset style='width:64%; height:90%; margin-left: 16%;'><legend>Tipo De Treinos</legend>";
 
         $fieldset .= "
             <div class='formulario'>

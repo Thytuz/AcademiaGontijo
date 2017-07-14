@@ -1,0 +1,64 @@
+===================================================================================
+Hora: 00:43:25 | Script: /AcademiaGontijo/Modulos/MantemAtleta.php
+Query executada: insert into Atletas  (`atle_id`, `atle_nome`, `atle_cpf`, `atle_dt_nasc`, `atle_sexo`, `atle_peso`, `atle_altura`, `atle_pretencao`, `atle_obs`, `atle_trei_id`)  values ((?), (?), (?), (?), (?), (?), (?), (?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '13' for key 'PRIMARY'
+
+===================================================================================
+Hora: 00:43:39 | Script: /AcademiaGontijo/Modulos/MantemAtleta.php
+Query executada: insert into Atletas  (`atle_id`, `atle_nome`, `atle_cpf`, `atle_dt_nasc`, `atle_sexo`, `atle_peso`, `atle_altura`, `atle_pretencao`, `atle_obs`, `atle_trei_id`)  values ((?), (?), (?), (?), (?), (?), (?), (?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '13' for key 'PRIMARY'
+
+===================================================================================
+Hora: 00:43:49 | Script: /AcademiaGontijo/Modulos/MantemAtleta.php
+Query executada: insert into Atletas  (`atle_id`, `atle_nome`, `atle_cpf`, `atle_dt_nasc`, `atle_sexo`, `atle_peso`, `atle_altura`, `atle_pretencao`, `atle_obs`, `atle_trei_id`)  values ((?), (?), (?), (?), (?), (?), (?), (?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '13' for key 'PRIMARY'
+
+===================================================================================
+Hora: 01:02:32 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: select * from Treinamentos where where trem_tren_id = ?  : EXECUTE : SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'where trem_tren_id = '32'' at line 1
+
+===================================================================================
+Hora: 01:02:32 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: delete from Treinos where tren_id = 32: EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`academia_gontijo`.`treinamentos`, CONSTRAINT `fk_Treinamentos_Treinos1` FOREIGN KEY (`trem_tren_id`) REFERENCES `treinos` (`tren_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+
+===================================================================================
+Hora: 03:16:11 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: select * from Treinamentos where where trem_tren_id = ?  : EXECUTE : SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'where trem_tren_id = '32'' at line 1
+
+===================================================================================
+Hora: 04:00:43 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: select * from Treinamentos where where trem_tren_id = ?  : EXECUTE : SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'where trem_tren_id = '33'' at line 1
+
+===================================================================================
+Hora: 04:00:43 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: delete from Treinos where tren_id = 33: EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`academia_gontijo`.`treinamentos`, CONSTRAINT `fk_Treinamentos_Treinos1` FOREIGN KEY (`trem_tren_id`) REFERENCES `treinos` (`tren_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+
+===================================================================================
+Hora: 04:02:36 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: select * from Treinamentos where where trem_tren_id = ?  : EXECUTE : SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'where trem_tren_id = '33'' at line 1
+
+===================================================================================
+Hora: 04:03:11 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: select * from Treinamentos where where trem_tren_id = ?  : EXECUTE : SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'where trem_tren_id = '34'' at line 1
+
+===================================================================================
+Hora: 04:03:35 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinamentos  (`trem_tren_id`, `trem_exer_id`, `trem_temp`, `trem_repeticao`, `trem_serie`)  values ((?), (?), (?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '17-35' for key 'PRIMARY'
+
+===================================================================================
+Hora: 04:04:08 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: select * from Treinamentos where where trem_tren_id = ?  : EXECUTE : SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'where trem_tren_id = '35'' at line 1
+
+===================================================================================
+Hora: 04:04:14 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: select * from Treinamentos where where trem_tren_id = ?  : EXECUTE : SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'where trem_tren_id = '36'' at line 1
+
+===================================================================================
+Hora: 04:05:22 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: select * from Treinamentos where where trem_tren_id = ?  : EXECUTE : SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'where trem_tren_id = '37'' at line 1
+
+===================================================================================
+Hora: 04:05:22 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: delete from Treinos where tren_id = 37: EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`academia_gontijo`.`treinamentos`, CONSTRAINT `fk_Treinamentos_Treinos1` FOREIGN KEY (`trem_tren_id`) REFERENCES `treinos` (`tren_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+
+===================================================================================
+Hora: 04:05:40 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: select * from Treinamentos where where trem_tren_id = ?  : EXECUTE : SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'where trem_tren_id = '37'' at line 1
+

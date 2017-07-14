@@ -85,8 +85,6 @@ class AtletaController {
     private function alteraObjeto() {
         $this->atletaModel = $this->atletaView->recebeDados();
 
-        //tratar dados
-        //gravar dados
         $alterou = $this->atletaAdo->alteraObjeto($this->atletaModel);
 
         if ($alterou) {

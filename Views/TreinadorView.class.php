@@ -22,6 +22,8 @@ class TreinadorView extends InterfaceWeb {
         }
 
         $optionsDosTreinadores = null;
+        $optionsDosTreinadores .= "\n\t\t\t<option value='-1'>Escolha um treinador </option>";
+        
         foreach ($treinadoresModel as $treinadorModel) {
             $optionsDosTreinadores .= "\n\t\t\t<option value='{$treinadorModel->getTreiId()}'>{$treinadorModel->getTreiNome()}</option>";
         }
@@ -32,7 +34,7 @@ class TreinadorView extends InterfaceWeb {
     protected function montaFieldsetConsulta() {
         $optionsDosTreinadores = $this->montaOptionsDaConsultaDeTreinadores();
 
-        $fieldset = "<fieldset><legend>Consulta</legend>";
+        $fieldset = "<fieldset style='width:64%; height:90%; margin-left: 16%;'><legend>Consulta</legend>";
 
         $fieldset .= "
             <div class='formulario'>
@@ -53,9 +55,6 @@ class TreinadorView extends InterfaceWeb {
 
     protected function montaCorpo($treinadorModel = null) {
         $titulo = "<h3>Cadastro de Treinadores</h3>";
-
-        $menus = new MenusView();
-        parent::adicionaAoCorpo($menus->montaMenus());
 
         parent::adicionaAoCorpo($titulo);
 
@@ -82,7 +81,7 @@ class TreinadorView extends InterfaceWeb {
             }
         }
 
-        $fieldset = "<fieldset><legend>Dados do Treinador</legend>";
+        $fieldset = "<fieldset style='width:64%; height:90%; margin-left: 16%;'><legend>Dados do Treinador</legend>";
 
         $fieldset .= "
             <div class='formulario'>

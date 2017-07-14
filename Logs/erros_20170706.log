@@ -1,0 +1,44 @@
+===================================================================================
+Hora: 22:06:19 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinos  (`tren_id`, `tren_atle_id`, `tren_seq`, `tren_tptr_id`)  values ((?), (?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2-1-2' for key 'unique'
+
+===================================================================================
+Hora: 22:07:14 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinos  (`tren_id`, `tren_atle_id`, `tren_seq`, `tren_tptr_id`)  values ((?), (?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2-1-2' for key 'unique'
+
+===================================================================================
+Hora: 22:08:20 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinos  (`tren_id`, `tren_atle_id`, `tren_seq`, `tren_tptr_id`)  values ((?), (?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2-1-2' for key 'unique'
+
+===================================================================================
+Hora: 22:08:50 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinos  (`tren_id`, `tren_atle_id`, `tren_seq`, `tren_tptr_id`)  values ((?), (?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2-1-2' for key 'unique'
+
+===================================================================================
+Hora: 22:09:16 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinos  (`tren_id`, `tren_atle_id`, `tren_seq`, `tren_tptr_id`)  values ((?), (?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2-1-2' for key 'unique'
+
+===================================================================================
+Hora: 22:13:08 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinos  (`tren_id`, `tren_atle_id`, `tren_seq`, `tren_tptr_id`)  values ((?), (?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2-1-2' for key 'unique'
+
+===================================================================================
+Hora: 22:13:33 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinos  (`tren_id`, `tren_atle_id`, `tren_seq`, `tren_tptr_id`)  values ((?), (?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2-1-2' for key 'unique'
+
+===================================================================================
+Hora: 22:13:42 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinos  (`tren_id`, `tren_atle_id`, `tren_seq`, `tren_tptr_id`)  values ((?), (?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2-1-2' for key 'unique'
+
+===================================================================================
+Hora: 22:13:52 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinamentos  (`trem_tren_id`, `trem_exer_id`, `trem_temp`, `trem_repeticao`, `trem_serie`)  values ((?), (?), (?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`academia_gontijo`.`treinamentos`, CONSTRAINT `fk_Treinamentos_Treinos1` FOREIGN KEY (`trem_tren_id`) REFERENCES `treinos` (`tren_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+
+===================================================================================
+Hora: 22:14:12 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinamentos  (`trem_tren_id`, `trem_exer_id`, `trem_temp`, `trem_repeticao`, `trem_serie`)  values ((?), (?), (?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`academia_gontijo`.`treinamentos`, CONSTRAINT `fk_Treinamentos_Treinos1` FOREIGN KEY (`trem_tren_id`) REFERENCES `treinos` (`tren_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+
+===================================================================================
+Hora: 22:15:17 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinamentos  (`trem_tren_id`, `trem_exer_id`, `trem_temp`, `trem_repeticao`, `trem_serie`)  values ((?), (?), (?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`academia_gontijo`.`treinamentos`, CONSTRAINT `fk_Treinamentos_Treinos1` FOREIGN KEY (`trem_tren_id`) REFERENCES `treinos` (`tren_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+

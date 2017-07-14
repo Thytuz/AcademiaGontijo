@@ -1,0 +1,116 @@
+===================================================================================
+Hora: 13:18:02 | Script: /AcademiaGontijo/Modulos/MantemAtleta.php
+Query executada: insert into Atletas  (`atle_id`, `atle_nome`, `atle_cpf`, `atle_dt_nasc`, `atle_sexo`, `atle_peso`, `atle_altura`, `atle_pretencao`, `atle_obs`, `atle_trei_id`)  values ((?), (?), (?), (?), (?), (?), (?), (?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'atle_sexo' cannot be null
+
+===================================================================================
+Hora: 13:18:08 | Script: /AcademiaGontijo/Modulos/MantemAtleta.php
+Query executada: insert into Atletas  (`atle_id`, `atle_nome`, `atle_cpf`, `atle_dt_nasc`, `atle_sexo`, `atle_peso`, `atle_altura`, `atle_pretencao`, `atle_obs`, `atle_trei_id`)  values ((?), (?), (?), (?), (?), (?), (?), (?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'atle_sexo' cannot be null
+
+===================================================================================
+Hora: 13:28:41 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinos  (`tren_id`, `tren_atle_id`, `tren_seq`, `tren_tptr_id`)  values ((?), (?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`academia_gontijo`.`treinos`, CONSTRAINT `fk_Treinos_TiposDeTreinos1` FOREIGN KEY (`tren_tptr_id`) REFERENCES `tiposdetreinos` (`tptr_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+
+===================================================================================
+Hora: 13:32:36 | Script: /AcademiaGontijo/Modulos/MantemExercicio.php
+Query executada: delete from Exercicios where  exer_id = ? : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`academia_gontijo`.`treinamentos`, CONSTRAINT `fk_Treinamentos_Exercicios1` FOREIGN KEY (`trem_exer_id`) REFERENCES `exercicios` (`exer_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+
+===================================================================================
+Hora: 13:32:44 | Script: /AcademiaGontijo/Modulos/MantemExercicio.php
+Query executada: delete from Exercicios where  exer_id = ? : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`academia_gontijo`.`treinamentos`, CONSTRAINT `fk_Treinamentos_Exercicios1` FOREIGN KEY (`trem_exer_id`) REFERENCES `exercicios` (`exer_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+
+===================================================================================
+Hora: 13:33:08 | Script: /AcademiaGontijo/Modulos/MantemExercicio.php
+Query executada: delete from Exercicios where  exer_id = ? : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`academia_gontijo`.`treinamentos`, CONSTRAINT `fk_Treinamentos_Exercicios1` FOREIGN KEY (`trem_exer_id`) REFERENCES `exercicios` (`exer_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+
+===================================================================================
+Hora: 13:33:14 | Script: /AcademiaGontijo/Modulos/MantemExercicio.php
+Query executada: delete from Exercicios where  exer_id = ? : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`academia_gontijo`.`treinamentos`, CONSTRAINT `fk_Treinamentos_Exercicios1` FOREIGN KEY (`trem_exer_id`) REFERENCES `exercicios` (`exer_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+
+===================================================================================
+Hora: 13:33:28 | Script: /AcademiaGontijo/Modulos/MantemExercicio.php
+Query executada: delete from Exercicios where  exer_id = ? : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`academia_gontijo`.`treinamentos`, CONSTRAINT `fk_Treinamentos_Exercicios1` FOREIGN KEY (`trem_exer_id`) REFERENCES `exercicios` (`exer_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+
+===================================================================================
+Hora: 13:33:34 | Script: /AcademiaGontijo/Modulos/MantemExercicio.php
+Query executada: delete from Exercicios where  exer_id = ? : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`academia_gontijo`.`treinamentos`, CONSTRAINT `fk_Treinamentos_Exercicios1` FOREIGN KEY (`trem_exer_id`) REFERENCES `exercicios` (`exer_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+
+===================================================================================
+Hora: 13:33:42 | Script: /AcademiaGontijo/Modulos/MantemExercicio.php
+Query executada: delete from Exercicios where  exer_id = ? : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`academia_gontijo`.`treinamentos`, CONSTRAINT `fk_Treinamentos_Exercicios1` FOREIGN KEY (`trem_exer_id`) REFERENCES `exercicios` (`exer_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+
+===================================================================================
+Hora: 13:33:53 | Script: /AcademiaGontijo/Modulos/MantemExercicio.php
+Query executada: delete from Exercicios where  exer_id = ? : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`academia_gontijo`.`treinamentos`, CONSTRAINT `fk_Treinamentos_Exercicios1` FOREIGN KEY (`trem_exer_id`) REFERENCES `exercicios` (`exer_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+
+===================================================================================
+Hora: 13:33:58 | Script: /AcademiaGontijo/Modulos/MantemExercicio.php
+Query executada: delete from Exercicios where  exer_id = ? : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`academia_gontijo`.`treinamentos`, CONSTRAINT `fk_Treinamentos_Exercicios1` FOREIGN KEY (`trem_exer_id`) REFERENCES `exercicios` (`exer_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+
+===================================================================================
+Hora: 13:34:03 | Script: /AcademiaGontijo/Modulos/MantemExercicio.php
+Query executada: delete from Exercicios where  exer_id = ? : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`academia_gontijo`.`treinamentos`, CONSTRAINT `fk_Treinamentos_Exercicios1` FOREIGN KEY (`trem_exer_id`) REFERENCES `exercicios` (`exer_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+
+===================================================================================
+Hora: 13:34:27 | Script: /AcademiaGontijo/Modulos/MantemExercicio.php
+Query executada: delete from Exercicios where  exer_id = ? : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`academia_gontijo`.`treinamentos`, CONSTRAINT `fk_Treinamentos_Exercicios1` FOREIGN KEY (`trem_exer_id`) REFERENCES `exercicios` (`exer_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+
+===================================================================================
+Hora: 13:37:18 | Script: /AcademiaGontijo/Modulos/MantemAtleta.php
+Query executada: delete from Atletas where  atle_id = ? : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`academia_gontijo`.`treinos`, CONSTRAINT `fk_Atletas_has_Exercicios_Atletas` FOREIGN KEY (`tren_atle_id`) REFERENCES `atletas` (`atle_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+
+===================================================================================
+Hora: 13:37:33 | Script: /AcademiaGontijo/Modulos/MantemAtleta.php
+Query executada: delete from Atletas where  atle_id = ? : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`academia_gontijo`.`treinos`, CONSTRAINT `fk_Atletas_has_Exercicios_Atletas` FOREIGN KEY (`tren_atle_id`) REFERENCES `atletas` (`atle_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+
+===================================================================================
+Hora: 13:37:38 | Script: /AcademiaGontijo/Modulos/MantemAtleta.php
+Query executada: delete from Atletas where  atle_id = ? : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`academia_gontijo`.`treinos`, CONSTRAINT `fk_Atletas_has_Exercicios_Atletas` FOREIGN KEY (`tren_atle_id`) REFERENCES `atletas` (`atle_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+
+===================================================================================
+Hora: 13:48:58 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinos  (`tren_id`, `tren_atle_id`, `tren_seq`, `tren_tptr_id`)  values ((?), (?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '6-1-8' for key 'unique'
+
+===================================================================================
+Hora: 14:02:20 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinos  (`tren_id`, `tren_atle_id`, `tren_seq`, `tren_tptr_id`)  values ((?), (?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '6-1-8' for key 'unique'
+
+===================================================================================
+Hora: 14:28:23 | Script: /AcademiaGontijo/Modulos/MantemAtleta.php
+Query executada: insert into Atletas  (`atle_id`, `atle_nome`, `atle_cpf`, `atle_dt_nasc`, `atle_sexo`, `atle_peso`, `atle_altura`, `atle_pretencao`, `atle_obs`, `atle_trei_id`)  values ((?), (?), (?), (?), (?), (?), (?), (?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '09029092092' for key 'atle_cpf_UNIQUE'
+
+===================================================================================
+Hora: 14:28:36 | Script: /AcademiaGontijo/Modulos/MantemAtleta.php
+Query executada: insert into Atletas  (`atle_id`, `atle_nome`, `atle_cpf`, `atle_dt_nasc`, `atle_sexo`, `atle_peso`, `atle_altura`, `atle_pretencao`, `atle_obs`, `atle_trei_id`)  values ((?), (?), (?), (?), (?), (?), (?), (?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '09029092092' for key 'atle_cpf_UNIQUE'
+
+===================================================================================
+Hora: 14:28:49 | Script: /AcademiaGontijo/Modulos/MantemAtleta.php
+Query executada: insert into Atletas  (`atle_id`, `atle_nome`, `atle_cpf`, `atle_dt_nasc`, `atle_sexo`, `atle_peso`, `atle_altura`, `atle_pretencao`, `atle_obs`, `atle_trei_id`)  values ((?), (?), (?), (?), (?), (?), (?), (?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '09029092092' for key 'atle_cpf_UNIQUE'
+
+===================================================================================
+Hora: 14:28:52 | Script: /AcademiaGontijo/Modulos/MantemAtleta.php
+Query executada: insert into Atletas  (`atle_id`, `atle_nome`, `atle_cpf`, `atle_dt_nasc`, `atle_sexo`, `atle_peso`, `atle_altura`, `atle_pretencao`, `atle_obs`, `atle_trei_id`)  values ((?), (?), (?), (?), (?), (?), (?), (?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '09029092092' for key 'atle_cpf_UNIQUE'
+
+===================================================================================
+Hora: 14:31:14 | Script: /AcademiaGontijo/Modulos/MantemExercicio.php
+Query executada: insert into Exercicios  (`exer_id`, `exer_nome`, `exer_descricao`, `exer_tptr_id`)  values ((?), (?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '15' for key 'PRIMARY'
+
+===================================================================================
+Hora: 14:31:25 | Script: /AcademiaGontijo/Modulos/MantemExercicio.php
+Query executada: insert into Exercicios  (`exer_id`, `exer_nome`, `exer_descricao`, `exer_tptr_id`)  values ((?), (?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '15' for key 'PRIMARY'
+
+===================================================================================
+Hora: 14:31:31 | Script: /AcademiaGontijo/Modulos/MantemExercicio.php
+Query executada: insert into Exercicios  (`exer_id`, `exer_nome`, `exer_descricao`, `exer_tptr_id`)  values ((?), (?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '15' for key 'PRIMARY'
+
+===================================================================================
+Hora: 14:33:39 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinos  (`tren_id`, `tren_atle_id`, `tren_seq`, `tren_tptr_id`)  values ((?), (?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '12-1-11' for key 'unique'
+
+===================================================================================
+Hora: 14:36:20 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinos  (`tren_id`, `tren_atle_id`, `tren_seq`, `tren_tptr_id`)  values ((?), (?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '12-2-11' for key 'unique'
+
+===================================================================================
+Hora: 14:37:37 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
+Query executada: insert into Treinos  (`tren_id`, `tren_atle_id`, `tren_seq`, `tren_tptr_id`)  values ((?), (?), (?), (?)) : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '12-1-11' for key 'unique'
+

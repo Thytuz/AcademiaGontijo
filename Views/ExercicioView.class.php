@@ -23,6 +23,7 @@ class ExercicioView extends InterfaceWeb {
         }
 
         $optionsDosExercicios = null;
+        $optionsDosExercicios .= "\n\t\t\t<option value='-1'>Escolha um exercício </option>";
         foreach ($exercicioModel as $exercicioModel) {
             $optionsDosExercicios .= "\n\t\t\t<option value='{$exercicioModel->getExerId()}'>{$exercicioModel->getExerNome()}</option>";
         }
@@ -46,11 +47,14 @@ class ExercicioView extends InterfaceWeb {
 
         $selected = null;
         $optionsDosTiposDeTreino = null;
+        $optionsDosTiposDeTreino .= "\n\t\t\t<option value='-1'>Escolha um tipo de treino </option>";
         foreach ($tiposDeTreinosModel as $tiposDetreinoModel) {
             if ($tiposDetreinoModel->getTptrId() == $exercicioModel->getExerTptrId()) {
                 $selected = "selected";
             }
             $optionsDosTiposDeTreino .= "\n\t\t\t<option value='{$tiposDetreinoModel->getTptrId()}' $selected>{$tiposDetreinoModel->getTptrNome()}</option>";
+
+            $selected = null;
         }
 
         return $optionsDosTiposDeTreino;
@@ -59,7 +63,7 @@ class ExercicioView extends InterfaceWeb {
     protected function montaFieldsetConsulta() {
         $optionsDosExercicios = $this->montaOptionsDaConsultaDeExercicio();
 
-        $fieldset = "<fieldset><legend>Consulta</legend>";
+        $fieldset = "<fieldset style='width:64%; height:90%; margin-left: 16%;'><legend>Consulta</legend>";
 
         $fieldset .= "
             <div class='formulario'>
@@ -81,9 +85,7 @@ class ExercicioView extends InterfaceWeb {
 
     protected function montaCorpo($exercicioModel) {
         $titulo = "<h3>Cadastro de Exercicios</h3>";
-        $menus = new MenusView();
-        parent::adicionaAoCorpo($menus->montaMenus());
-
+        
         parent::adicionaAoCorpo($titulo);
 
         $fieldsetConsulta = $this->montaFieldsetConsulta();
@@ -101,7 +103,7 @@ class ExercicioView extends InterfaceWeb {
 
         $optionsDosTiposDeTreino = $this->montaOptionsDaConsultaDeTiposDeTreino($exercicioModel);
 
-        $fieldset = "<fieldset><legend>Exercicios</legend>";
+        $fieldset = "<fieldset style=' width:64%; height:90%; margin-left: 16%;'><legend>Exercicios</legend>";
 
         $fieldset .= "
             <div class='formulario'>

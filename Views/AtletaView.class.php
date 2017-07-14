@@ -24,6 +24,8 @@ class AtletaView extends InterfaceWeb {
         }
 
         $optionsAtletas = null;
+        $optionsAtletas .= "\n\t\t\t<option value='-1'>Escolha um atleta </option>";
+
         foreach ($atletasModel as $atletaModel) {
             $optionsAtletas .= "\n\t\t\t<option value='{$atletaModel->getAtleId()}'>{$atletaModel->getAtleNome()}</option>";
         }
@@ -34,7 +36,7 @@ class AtletaView extends InterfaceWeb {
     protected function montaFieldsetConsulta() {
         $optionsAtletas = $this->montaOptionsDaConsultaDeAtletas();
 
-        $fieldset = "<fieldset><legend>Consulta</legend>";
+        $fieldset = "<fieldset style='width:64%; height:90%; margin-left: 16%;'><legend>Consulta</legend>";
 
         $fieldset .= "
             <div class='formulario'>
@@ -55,9 +57,7 @@ class AtletaView extends InterfaceWeb {
 
     protected function montaCorpo($atletaModel) {
         $titulo = "<h3>Cadastro de Atletas</h3>";
-        $menus = new MenusView();
-        parent::adicionaAoCorpo($menus->montaMenus());
-
+      
         parent::adicionaAoCorpo($titulo);
 
         $fieldsetConsulta = $this->montaFieldsetConsulta();
@@ -84,7 +84,7 @@ class AtletaView extends InterfaceWeb {
 
         $optionsDosTreinadores = $this->montaOptionsDeTreinadores($atletaModel);
 
-        $fieldset = "<fieldset><legend>Dados do Atleta</legend>";
+        $fieldset = "<fieldset style='width:64%; height:90%; margin-left: 16%;'><legend>Dados do Atleta</legend>";
 
         $fieldset .= "
             <div class='formulario'>
@@ -136,11 +136,14 @@ class AtletaView extends InterfaceWeb {
 
         $selected = null;
         $optionsDosTreinadores = null;
+        $optionsDosTreinadores .= "\n\t\t\t<option value='-1' >Escolha um treinador </option>";
+
         foreach ($treinadoresModel as $treinadorModel) {
             if ($treinadorModel->getTreiId() == $atletaModel->getAtleTreiId()) {
                 $selected = "selected";
             }
-            $optionsDosTreinadores .= "\n\t\t\t<option value='{$treinadorModel->getTreiId()}' $selected>{$treinadorModel->getTreiNome()}</option>";
+            $optionsDosTreinadores .= "\n\t\t\t<option value='{$treinadorModel->getTreiId()}' $selected >{$treinadorModel->getTreiNome()}</option>";
+            $selected = null;
         }
 
         return $optionsDosTreinadores;

@@ -14,9 +14,6 @@ class TreinoView extends InterfaceWeb {
     protected function montaCorpo($treinoModel) {
         $titulo = "<h3>Cadastro de Treinos</h3>";
 
-        $menus = new MenusView();
-        parent::adicionaAoCorpo($menus->montaMenus());
-
         parent::adicionaAoCorpo($titulo);
 
         $fieldsetConsulta = $this->montaFieldsetConsulta();
@@ -30,7 +27,7 @@ class TreinoView extends InterfaceWeb {
         $treinoModel = new TreinoModel();
         $optionsAtletas = $this->montaOptionsAtletas($treinoModel);
 
-        $fieldset = "<fieldset><legend>Consulta</legend>";
+        $fieldset = "<fieldset style='width:64%; height:90%; margin-left: 16%;'><legend>Consulta</legend>";
         $fieldset .= "
             <div class='formulario'>
                 <form id='form' action='' method='POST'>
@@ -52,7 +49,7 @@ class TreinoView extends InterfaceWeb {
         $optionsTiposDeTreino = $this->montaOptionsTiposDeTreino();
 
         $fieldset = "
-            <fieldset><legend>Treino</legend>
+            <fieldset style='width:64%; height:90%; margin-left: 16%;'><legend>Treino</legend>
                 <div class='formulario'>
                     <form id='form' action='' method='POST'>
                         <label>Atleta</label>
@@ -195,6 +192,8 @@ class TreinoView extends InterfaceWeb {
         }
 
         $optionsAtletas = null;
+        $optionsAtletas .= "\n\t\t\t<option value='-1'>Escolha um atleta </option>";
+        
         foreach ($atletasModel as $atletaModel) {
             $optionsAtletas .= "\n\t\t\t<option value='{$atletaModel->getAtleId()}'>{$atletaModel->getAtleNome()}</option>";
         }
