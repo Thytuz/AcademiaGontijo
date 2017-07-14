@@ -3,6 +3,8 @@
 require_once '../Views/AtletaView.class.php';
 require_once '../Models/AtletaModel.class.php';
 require_once '../ADOs/AtletaAdo.class.php';
+require_once '../ADOs/TreinoAdo.class.php';
+require_once '../Models/TreinoModel.class.php';
 
 class AtletaController {
 
@@ -99,12 +101,19 @@ class AtletaController {
 
         //tratar dados
         //gravar dados
-        $excluiu = $this->atletaAdo->excluiObjeto($this->atletaModel);
+        $treinoAdo = new TreinoAdo();
+        $temTreino = $treinoAdo->buscaTreinoPorAtleId($this->atletaModel->getAtleId());
+        if ($temTreino == 0 || $temTreino == false) {
+            $excluiu = $this->atletaAdo->excluiObjeto($this->atletaModel);
+        } else {
+            $this->atletaView->adicionaEmMensagens("Não é permitido excluir atletas relacionados a treinos");
+            return;
+        }
 
         if ($excluiu) {
             $this->atletaView->adicionaEmMensagens("Excluido com sucesso!");
         } else {
-            $this->atletaView->adicionaEmMensagens("Ocorreu um erro na exclusão!");
+            $this->atletaView->adicionaEmMensagens("Ocorreu um erro na exclusão! Contate o Analista");
         }
     }
 

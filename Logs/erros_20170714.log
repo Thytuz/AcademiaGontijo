@@ -102,3 +102,15 @@ Query executada: select * from Treinamentos where where trem_tren_id = ?  : EXEC
 Hora: 13:06:35 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
 Query executada: delete from Treinos where tren_id = 42: EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`academia_gontijo`.`treinamentos`, CONSTRAINT `fk_Treinamentos_Treinos1` FOREIGN KEY (`trem_tren_id`) REFERENCES `treinos` (`tren_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
 
+===================================================================================
+Hora: 13:10:39 | Script: /AcademiaGontijo/Modulos/MantemAtleta.php
+Query executada: delete from Atletas where  atle_id = ? : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`academia_gontijo`.`treinos`, CONSTRAINT `fk_Atletas_has_Exercicios_Atletas` FOREIGN KEY (`tren_atle_id`) REFERENCES `atletas` (`atle_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+
+===================================================================================
+Hora: 13:17:39 | Script: /AcademiaGontijo/Modulos/MantemTipoDeTreino.php
+Query executada: delete from TiposDeTreinos where  tptr_id = ? : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`academia_gontijo`.`exercicios`, CONSTRAINT `fk_Exercicios_TiposDeTreinos1` FOREIGN KEY (`exer_tptr_id`) REFERENCES `tiposdetreinos` (`tptr_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+
+===================================================================================
+Hora: 13:23:55 | Script: /AcademiaGontijo/Modulos/MantemExercicio.php
+Query executada: delete from Exercicios where  exer_id = ? : EXECUTE : SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`academia_gontijo`.`treinamentos`, CONSTRAINT `fk_Treinamentos_Exercicios1` FOREIGN KEY (`trem_exer_id`) REFERENCES `exercicios` (`exer_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+

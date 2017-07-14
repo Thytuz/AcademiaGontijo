@@ -3,6 +3,8 @@
 require_once '../Views/ExercicioView.class.php';
 require_once '../Models/ExercicioModel.class.php';
 require_once '../ADOs/ExercicioADO.class.php';
+require_once '../Models/TreinamentoModel.class.php';
+require_once '../ADOs/TreinamentoAdo.class.php';
 
 class ExercicioController {
 
@@ -96,12 +98,20 @@ class ExercicioController {
 
         //tratar dados
         //gravar dados
-        $excluiu = $this->exercicioAdo->excluiObjeto($this->exercicioModel);
+
+        $treinamentoAdo = new TreinamentoAdo();
+        $exercicioEstaRelacionadoATreinamento = $treinamentoAdo->buscaTreinamentosQuePossuemExercicioId($this->exercicioModel->getExerId());
+        if ($exercicioEstaRelacionadoATreinamento == 0 || $exercicioEstaRelacionadoATreinamento == false) {
+            $excluiu = $this->exercicioAdo->excluiObjeto($this->exercicioModel);
+        } else {
+            $this->exercicioView->adicionaEmMensagens("Não é permitido excluir exercicios relacionados a treinamentos");
+            return;
+        }
 
         if ($excluiu) {
             $this->exercicioView->adicionaEmMensagens("Excluido com sucesso!");
         } else {
-            $this->exercicioView->adicionaEmMensagens("Ocorreu um erro na exclusão!");
+            $this->exercicioView->adicionaEmMensagens("Ocorreu um erro na exclusão! Contate o analista");
         }
     }
 

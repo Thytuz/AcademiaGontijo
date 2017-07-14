@@ -47,4 +47,9 @@ class TreinamentoAdo extends AdoPdoAbstract {
         return Array($query, $arrayDeColunasEValores);
     }
 
+    public function buscaTreinamentosQuePossuemExercicioId($exerId) {
+        $where = " trem_exer_id = ? ";
+        return parent::buscaArrayObjetoComPs(array($exerId), $where);
+    }
+
 }

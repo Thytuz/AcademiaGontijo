@@ -3,6 +3,8 @@
 require_once '../Views/TiposDeTreinoView.class.php';
 require_once '../Models/TipoDeTreinoModel.class.php';
 require_once '../ADOs/TipoDeTreinoADO.class.php';
+require_once '../ADOs/ExercicioADO.class.php';
+require_once '../Models/ExercicioModel.class.php';
 
 class TiposDeTreinoController {
 
@@ -97,12 +99,20 @@ class TiposDeTreinoController {
 
         //tratar dados
         //gravar dados
-        $excluiu = $this->tiposDeTreinoAdo->excluiObjeto($this->tiposDeTreinoModel);
+        $exercicioAdo = new ExercicioAdo();
+        $temExercicioRelacionado = $exercicioAdo->buscaExerciciosPorTipoDeTreino($this->tiposDeTreinoModel->getTptrId());
+
+        if ($temExercicioRelacionado == 0 || $temExercicioRelacionado == false) {
+            $excluiu = $this->tiposDeTreinoAdo->excluiObjeto($this->tiposDeTreinoModel);
+        } else {
+            $this->tiposDeTreinoView->adicionaEmMensagens("Não é permitido excluir tipos de treino que possuem treinos relacionados");
+            return;
+        }
 
         if ($excluiu) {
             $this->tiposDeTreinoView->adicionaEmMensagens("Excluido com sucesso!");
         } else {
-            $this->tiposDeTreinoView->adicionaEmMensagens("Ocorreu um erro na exclusão!");
+            $this->tiposDeTreinoView->adicionaEmMensagens("Ocorreu um erro na exclusão! Contate o analista");
         }
     }
 

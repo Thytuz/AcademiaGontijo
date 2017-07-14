@@ -370,3 +370,15 @@ Query executada: insert into Treinamentos  (`trem_tren_id`, `trem_exer_id`, `tre
 Hora: 13:06:35 | Script: /AcademiaGontijo/Modulos/MantemTreino.php
 Query executada: delete from Treinamentos where trem_tren_id = 42 and trem_exer_id = 24 | Método: executaPs | ID do usuário Logado:
 
+===================================================================================
+Hora: 13:10:15 | Script: /AcademiaGontijo/Modulos/MantemTreinador.php
+Query executada: delete from Treinadores where  trei_id = ?  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:35:02 | Script: /AcademiaGontijo/Modulos/MantemExercicio.php
+Query executada: delete from Exercicios where  exer_id = ?  | Método: executaPs | ID do usuário Logado:
+
+===================================================================================
+Hora: 13:35:07 | Script: /AcademiaGontijo/Modulos/MantemExercicio.php
+Query executada: delete from Exercicios where  exer_id = ?  | Método: executaPs | ID do usuário Logado:
+
