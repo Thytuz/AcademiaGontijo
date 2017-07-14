@@ -34,7 +34,7 @@ class TreinadorView extends InterfaceWeb {
     protected function montaFieldsetConsulta() {
         $optionsDosTreinadores = $this->montaOptionsDaConsultaDeTreinadores();
 
-        $fieldset = "<fieldset style='width:64%; height:90%; margin-left: 16%;'><legend>Consulta</legend>";
+        $fieldset = "<fieldset><legend>Consulta</legend>";
 
         $fieldset .= "
             <div class='formulario'>
@@ -81,7 +81,7 @@ class TreinadorView extends InterfaceWeb {
             }
         }
 
-        $fieldset = "<fieldset style='width:64%; height:90%; margin-left: 16%;'><legend>Dados do Treinador</legend>";
+        $fieldset = "<fieldset><legend>Dados do Treinador</legend>";
 
         $fieldset .= "
             <div class='formulario'>
@@ -95,7 +95,7 @@ class TreinadorView extends InterfaceWeb {
                         <button name='acao' type='submit' value='inc'>Incluir</button>
                         <button name='acao' type='submit' value='alt' {$btnDisabled}>Alterar</button>
                         <button name='acao' type='submit' value='exc' {$btnDisabled}>Excluir</button>
-                        <button name='acao' type='submit' value='nov'>Novo</button>
+                        <button name='acao' type='submit' value='nov' {$btnDisabled}>Novo</button>
                     </p>
                 </form> 
             </div>";

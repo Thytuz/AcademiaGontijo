@@ -63,7 +63,7 @@ class ExercicioView extends InterfaceWeb {
     protected function montaFieldsetConsulta() {
         $optionsDosExercicios = $this->montaOptionsDaConsultaDeExercicio();
 
-        $fieldset = "<fieldset style='width:64%; height:90%; margin-left: 16%;'><legend>Consulta</legend>";
+        $fieldset = "<fieldset><legend>Consulta</legend>";
 
         $fieldset .= "
             <div class='formulario'>
@@ -103,7 +103,7 @@ class ExercicioView extends InterfaceWeb {
 
         $optionsDosTiposDeTreino = $this->montaOptionsDaConsultaDeTiposDeTreino($exercicioModel);
 
-        $fieldset = "<fieldset style=' width:64%; height:90%; margin-left: 16%;'><legend>Exercicios</legend>";
+        $fieldset = "<fieldset><legend>Exercicios</legend>";
 
         $fieldset .= "
             <div class='formulario'>

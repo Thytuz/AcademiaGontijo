@@ -27,7 +27,7 @@ class TreinoView extends InterfaceWeb {
         $treinoModel = new TreinoModel();
         $optionsAtletas = $this->montaOptionsAtletas($treinoModel);
 
-        $fieldset = "<fieldset style='width:64%; height:90%; margin-left: 16%;'><legend>Consulta</legend>";
+        $fieldset = "<fieldset><legend>Consulta</legend>";
         $fieldset .= "
             <div class='formulario'>
                 <form id='form' action='' method='POST'>
@@ -49,7 +49,7 @@ class TreinoView extends InterfaceWeb {
         $optionsTiposDeTreino = $this->montaOptionsTiposDeTreino();
 
         $fieldset = "
-            <fieldset style='width:64%; height:90%; margin-left: 16%;'><legend>Treino</legend>
+            <fieldset><legend>Treino</legend>
                 <div class='formulario'>
                     <form id='form' action='' method='POST'>
                         <label>Atleta</label>

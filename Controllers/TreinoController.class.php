@@ -128,10 +128,10 @@ class TreinoController {
             if ($this->checaSeTodoOTreinamentoDoTreinoFoiExcluidoEExcluiTreino($treinamentoModel)) {
                 $this->treinoView->adicionaEmMensagens("Treinamento excluido com sucesso!");
             } else {
-                $this->treinoView->adicionaEmMensagens("Erro ao excluir Treinamento. Contate o analista");
+                $this->treinoView->adicionaEmMensagens("Exercício do treinamento excluido com sucesso!");
             }
         } else {
-            $this->treinoView->adicionaEmMensagens("Erro ao excluir Treinamento. Contate o analista");
+            $this->treinoView->adicionaEmMensagens("Erro ao excluir Exercício. Contate o analista");
         }
         $this->acao = 'con';
     }

@@ -34,7 +34,7 @@ class TiposDeTreinoView extends InterfaceWeb {
     protected function montaFieldsetConsulta() {
         $optionsDosTiposDeTreino = $this->montaOptionsDaConsultaDeTiposDeTreino();
 
-        $fieldset = "<fieldset style='width:64%; height:90%; margin-left: 16%;'><legend>Consulta</legend>";
+        $fieldset = "<fieldset><legend>Consulta</legend>";
 
         $fieldset .= "
             <div class='formulario'>
@@ -71,7 +71,7 @@ class TiposDeTreinoView extends InterfaceWeb {
             $btnDisabled = "disabled";
         }
 
-        $fieldset = "<fieldset style='width:64%; height:90%; margin-left: 16%;'><legend>Tipo De Treinos</legend>";
+        $fieldset = "<fieldset><legend>Tipo De Treinos</legend>";
 
         $fieldset .= "
             <div class='formulario'>

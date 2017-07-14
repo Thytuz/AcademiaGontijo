@@ -36,7 +36,7 @@ class AtletaView extends InterfaceWeb {
     protected function montaFieldsetConsulta() {
         $optionsAtletas = $this->montaOptionsDaConsultaDeAtletas();
 
-        $fieldset = "<fieldset style='width:64%; height:90%; margin-left: 16%;'><legend>Consulta</legend>";
+        $fieldset = "<fieldset><legend>Consulta</legend>";
 
         $fieldset .= "
             <div class='formulario'>
@@ -84,7 +84,7 @@ class AtletaView extends InterfaceWeb {
 
         $optionsDosTreinadores = $this->montaOptionsDeTreinadores($atletaModel);
 
-        $fieldset = "<fieldset style='width:64%; height:90%; margin-left: 16%;'><legend>Dados do Atleta</legend>";
+        $fieldset = "<fieldset><legend>Dados do Atleta</legend>";
 
         $fieldset .= "
             <div class='formulario'>

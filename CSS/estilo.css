@@ -24,6 +24,9 @@ fieldset {
     padding: 0px 8px 8px 8px;
     width: calc(99% - 16px);
     border: 1px solid black;
+    width:64%; 
+    height:90%; 
+    margin-left: 16%;
 }
 
 label {
@@ -48,7 +51,7 @@ form input[type='radio'] {
 
 
 button{
-    margin-left: 150px
+    margin-left: 75px
 }
 
 .dropdown {
